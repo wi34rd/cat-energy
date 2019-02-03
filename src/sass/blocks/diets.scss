@@ -1,0 +1,13 @@
+.diets {
+    padding: 1.6em $mobile-hpadding 0;
+}
+
+.diets__list {
+    @extend %custom-list;
+}
+
+.diets__item {
+    & + & {
+        margin-top: 1.4em;
+    }
+}

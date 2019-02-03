@@ -1,0 +1,82 @@
+.diet {
+    position: relative;
+
+    padding: 2.4em 1.6em;
+
+    background: $diet-bg-color;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        // TODO: Определить нужно ли здесь использовать относительные единицы измерения или же абсолютные
+        top: 25px;
+        left: 22px;
+
+        width: 50px;
+        height: 50px;
+
+        background: no-repeat $icon-bg-color;
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: '';
+
+        position: absolute;
+    }
+}
+
+.diet--losing-weight {
+    &::after {
+        top: 22px;
+        left: 30px;
+
+        width: 35px;
+        height: 49px;
+
+        background: url(../images/icons/diets/sitting-cat.svg) no-repeat;
+    }
+}
+
+.diet--weight-gain {
+    &::after {
+        top: 35px;
+        left: 13px;
+
+        width: 67px;
+        height: 28px;
+
+        background: url(../images/icons/diets/waling-cat.svg) no-repeat;
+    }
+}
+
+.diet__title {
+    padding-left: 69px;
+    margin: 0;
+
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 1.7em;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.diet__description {
+    margin: 2.3em 0 0;
+}
+
+.diet__link {
+    display: block;
+
+    padding-top: 1em;
+    margin-top: 1.4em;
+
+    font-family: $secondary-font;
+    font-size: 1.15em;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border-top: 1px solid #d9d9d9;
+}

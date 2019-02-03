@@ -1,0 +1,16 @@
+.button {
+    @extend %custom-button;
+
+    display: block;
+
+    padding: 11px 0;
+    margin-top: 3px;
+
+    font-family: $secondary-font;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background: $first-color;
+}

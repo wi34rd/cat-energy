@@ -1,0 +1,45 @@
+.difference__control {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 28px;
+}
+
+.difference__label {
+    font-family: $secondary-font;
+    font-size: 1.15em;
+    text-transform: uppercase;
+}
+
+.difference__original-range {
+    display: none;
+}
+
+.difference__custom-range {
+    position: relative;
+    top: 3px;
+
+    width: 84px;
+    height: 12px;
+    margin: 0 19px;
+
+    background: #fff;
+    border: 1px solid #cdcdcd;
+    border-radius: 7px;
+
+    &::before {
+        content: '';
+
+        position: relative;
+        top: 3px;
+        left: 5px;
+
+        display: block;
+
+        width: 35px;
+        height: 6px;
+
+        background: $first-color;
+        border-radius: 3px;
+    }
+}

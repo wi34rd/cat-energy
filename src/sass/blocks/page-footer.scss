@@ -1,0 +1,10 @@
+.page-footer {
+    padding: 0 $mobile-hpadding;
+
+    background: $second-color;
+}
+
+.page-footer__socnets,
+.page-footer__copyright {
+    border-top: 1px solid #d9d9d9;
+}

@@ -1,0 +1,51 @@
+.achievements {
+    @extend %custom-list;
+
+    display: flex;
+
+    margin-top: 1.8em;
+}
+
+.achievements__item {
+    position: relative;
+
+    flex-basis: 50%;
+
+    padding: 0.9em 0;
+
+    border: 1px solid $achievements-border-color;
+    border-radius: 3px;
+
+    & + & {
+        margin-left: 11.5%;
+    }
+}
+
+.achievements__text {
+    display: block;
+
+    font-family: $secondary-font;
+    font-size: 1.7rem;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.achievements__legend {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -22px;
+
+    font-size: .9rem;
+    text-align: center;
+}
+
+.achievements__legend-text {
+    display: table;
+
+    padding: 0 17px;
+    margin: 0 auto;
+
+    background: $example-bg-color;
+}

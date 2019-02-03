@@ -1,0 +1,35 @@
+.socnets {
+
+}
+
+.socnets__list {
+    @extend %custom-list;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 20px 0;
+
+    li + li {
+        margin-left: 34px;
+    }
+}
+
+.socnets__link {
+    display: block;
+
+    width: 22px;
+    height: 22px;
+}
+
+.socnets__link--vkontakte {
+    background: url(../images/icons/socnets/vkontakte.svg) center/22px 12px no-repeat;
+}
+
+.socnets__link--instagram {
+    background: url(../images/icons/socnets/instagram.svg) center/16px 16px no-repeat;
+}
+
+.socnets__link--facebook {
+    background: url(../images/icons/socnets/facebook.svg) center/10px 19px no-repeat;
+}
