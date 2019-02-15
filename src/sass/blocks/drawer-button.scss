@@ -7,56 +7,30 @@
     height: 1.2em;
 
     outline: none;
-}
 
-%drawer-button__icon-line {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-
-    width: 100%;
-    margin: auto;
-
-    background: #000;
-    transition: all 1s;
-}
-
-.drawer-button__icon {
-    @extend %drawer-button__icon-line;
-
-    height: 8.35%;
-
-    &::before,
-    &::after {
-        @extend %drawer-button__icon-line;
-
-        content: '';
-
-        left: 0;
-
-        height: 100%;
+    &__icon {
+        rect {
+            transition: 1s;
+        }
     }
 
-    &::before {
-        bottom: 800%;
-    }
-
-    &::after {
-        top: 800%;
-    }
-
-    .drawer-button--close & {
-        background: #fff;
-        transform: rotate(180deg);
-
-        &::before {
-            bottom: 0;
-            transform: rotate(-45deg);
+    &[aria-expanded="true"] &__icon {
+        rect {
+            transform-origin: 12px 12px;
+            y: 11;
         }
 
-        &::after {
-            top: 0;
-            transform: rotate(-315deg);
+        rect:first-child {
+            transform: rotate(45deg);
+        }
+
+        rect:nth-child(2) {
+            x: 12;
+            width: 0;
+        }
+
+        rect:last-child {
+            transform: rotate(-45deg);
         }
     }
 }

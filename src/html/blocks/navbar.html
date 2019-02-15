@@ -8,8 +8,13 @@
 
         <img src="images/cat-energy-heading-mobile.svg" alt="Заголовок логотипа Cat Energy" width="101" height="18" class="navbar__mobile-logo-heading">
 
-        <button class="drawer-button navbar__drawer-button" id="drawer-button">
-            <div class="drawer-button__icon"></div>
+        <button class="drawer-button navbar__drawer-button" id="drawer-button" aria-expanded="false">
+            <!-- TODO: Убрать в отдельный файл и импортировать -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="drawer-button__icon">
+                <rect x="0" y="3" width="24" height="2"/>
+                <rect x="0" y="11" width="24" height="2" />
+                <rect x="0" y="19" width="24" height="2" />
+            </svg>
         </button>
     </div>
 
