@@ -1,7 +1,3 @@
-.socnets {
-
-}
-
 .socnets__list {
     @extend %custom-list;
 
@@ -11,7 +7,7 @@
     padding: 20px 0;
 
     li + li {
-        margin-left: 34px;
+        margin-left: 12%;
     }
 }
 

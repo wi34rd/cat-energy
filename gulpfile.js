@@ -39,6 +39,11 @@ gulp.task('css', () => {
         .pipe(browserSync.stream());
 });
 
+gulp.task('js', () => {
+    return gulp.src('src/js/*.js')
+        .pipe(gulp.dest('build/js/'));
+});
+
 gulp.task('other', () => {
     return gulp.src([
             'src/fonts/*.{svg,ttf,woff,woff2}',
@@ -58,7 +63,7 @@ gulp.task('reload', done => {
     done();
 });
 
-gulp.task('build', gulp.series('clean', 'other', 'css', 'html'));
+gulp.task('build', gulp.series('clean', 'other', 'js', 'css', 'html'));
 
 gulp.task('serve', () => {
     browserSync.init({
@@ -77,7 +82,7 @@ gulp.task('serve', () => {
 
     gulp.watch('src/sass/**/*.{scss,sass}', gulp.series('css')); // TODO: Добавить задачу "csso"
 
-    // gulp.watch('src/js/**/*.js', gulp.series('uglify'));
+    gulp.watch('src/js/**/*.js', gulp.series('js', 'reload'));
 
     gulp.watch(
         [

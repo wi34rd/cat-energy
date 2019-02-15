@@ -13,18 +13,23 @@
 
     font-family: $secondary-font;
     font-size: 1.15em;
-    color: #000;
+    color: $on-background-label-color;
     text-transform: uppercase;
 }
 
 .contacts__address {
     font-style: normal;
+    line-height: 1.43;
 }
 
 .contacts__map {
     margin-top: 26px;
 
+    background: $map-background-color;
+
     img {
         display: block;
+
+        margin: 0 auto;
     }
 }

@@ -1,82 +1,147 @@
 .diet {
     position: relative;
 
-    padding: 2.4em 1.6em;
+    padding: 2.4em 7.1% 1.4em;
 
-    background: $diet-bg-color;
+    background: $secondary-color;
 
-    &::before {
-        content: '';
-
-        position: absolute;
-        // TODO: Определить нужно ли здесь использовать относительные единицы измерения или же абсолютные
-        top: 25px;
-        left: 22px;
-
-        width: 50px;
-        height: 50px;
-
-        background: no-repeat $icon-bg-color;
-        border-radius: 50%;
-    }
-
-    &::after {
-        content: '';
-
-        position: absolute;
+    @media (min-width: $tablet-min-width) {
+        padding: 4.5em 7.3% 3.69em;
     }
 }
 
-.diet--losing-weight {
-    &::after {
-        top: 22px;
-        left: 30px;
+.diet--slim {
+    .diet__icon {
+        &::after {
+            top: -6%;
+            left: 15%;
 
-        width: 35px;
-        height: 49px;
+            width: 70%;
+            height: 97%;
 
-        background: url(../images/icons/diets/sitting-cat.svg) no-repeat;
+            background-image: url(../images/icons/diets/slim.svg);
+        }
+    }
+
+    @media (min-width: $tablet-min-width) {
+        padding-right: 285px;
     }
 }
 
-.diet--weight-gain {
+.diet--pro {
+    .diet__icon {
+        &::after {
+            top: 22%;
+            left: -18%;
+
+            width: 134%;
+            height: 56%;
+
+            background-image: url(../images/icons/diets/pro.svg);
+        }
+    }
+
+    @media (min-width: $tablet-min-width) {
+        padding-right: 316px;
+    }
+}
+
+.diet__icon {
+    position: absolute;
+
+    // TODO: Определить нужно ли здесь использовать относительные единицы измерения или же абсолютные
+    top: 25px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    background: $primary-color;
+    border-radius: 50%;
+
     &::after {
-        top: 35px;
-        left: 13px;
+        content: '';
 
-        width: 67px;
-        height: 28px;
+        position: absolute;
 
-        background: url(../images/icons/diets/waling-cat.svg) no-repeat;
+        background: no-repeat;
+    }
+
+    @media (min-width: $tablet-min-width) {
+        top: 90px;
+        right: 60px;
+        left: auto;
+
+        width: 200px;
+        height: 200px;
     }
 }
 
 .diet__title {
-    padding-left: 69px;
+    padding-left: 71px;
     margin: 0;
 
     font-family: $secondary-font;
     font-weight: 400;
     font-size: 1.7em;
-    color: #000;
+    color: $on-secondary-label-color;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-min-width) {
+        padding: 0;
+
+        font-size: 2.25em;
+    }
 }
 
 .diet__description {
-    margin: 2.3em 0 0;
+    margin: 2.25em 0 0;
+
+    @media (min-width: $tablet-min-width) {
+        margin-top: 1.375em;
+    }
 }
 
 .diet__link {
     display: block;
 
-    padding-top: 1em;
+    padding-top: 1.1em;
     margin-top: 1.4em;
 
     font-family: $secondary-font;
     font-size: 1.15em;
-    color: #000;
+    color: $on-secondary-label-color;
     text-decoration: none;
     text-transform: uppercase;
 
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid $border-color-2;
+
+    &::after {
+        content: '';
+
+        display: inline-block;
+
+        width: 24px;
+        height: 11px;
+        margin-left: 12px;
+
+        vertical-align: 1px;
+
+        background: url(../images/characters/arrow-long-right.svg) no-repeat;
+    }
+
+    @media (min-width: $tablet-min-width) {
+        margin-top: 2.75em;
+        padding: 0;
+
+        font-size: 1.25em;
+
+        border: none;
+
+        &::after {
+            margin-left: 1.25em;
+
+            vertical-align: 0.15em;
+        }
+    }
 }

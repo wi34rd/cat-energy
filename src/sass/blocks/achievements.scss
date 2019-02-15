@@ -1,11 +1,3 @@
-.achievements {
-    @extend %custom-list;
-
-    display: flex;
-
-    margin-top: 1.8em;
-}
-
 .achievements__item {
     position: relative;
 
@@ -13,7 +5,7 @@
 
     padding: 0.9em 0;
 
-    border: 1px solid $achievements-border-color;
+    border: 1px solid $border-color-3;
     border-radius: 3px;
 
     & + & {
@@ -26,7 +18,7 @@
 
     font-family: $secondary-font;
     font-size: 1.7rem;
-    color: #000;
+    color: $on-background-color;
     text-align: center;
     text-transform: uppercase;
 }
@@ -35,17 +27,18 @@
     position: absolute;
     right: 0;
     left: 0;
-    bottom: -22px;
+    bottom: -1.25em;
 
-    font-size: .9rem;
+    font-size: .855em;
+    line-height: 1;
     text-align: center;
 }
 
 .achievements__legend-text {
     display: table;
 
-    padding: 0 17px;
+    padding: 0 17px; // TODO: заменить на относительную величину
     margin: 0 auto;
 
-    background: $example-bg-color;
+    background: $secondary-color;
 }

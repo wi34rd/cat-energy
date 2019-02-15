@@ -1,13 +1,23 @@
 .diets {
-    padding: 1.6em $mobile-hpadding 0;
+    padding: 0 $mobile-hpadding;
+    margin-top: 1.6em;
+
+    @media (min-width: $tablet-min-width) {
+        padding: 0 $tablet-hpadding;
+        margin: 0;
+    }
 }
 
 .diets__list {
     @extend %custom-list;
-}
 
-.diets__item {
-    & + & {
+    li + li {
         margin-top: 1.4em;
+    }
+
+    @media (min-width: $tablet-min-width) {
+        li + li {
+            margin-top: 1.875em;
+        }
     }
 }

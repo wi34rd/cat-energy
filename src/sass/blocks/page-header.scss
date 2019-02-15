@@ -1,0 +1,81 @@
+.page-header {
+    > *:not(.navbar) {
+        display: none;
+    }
+    // position: relative;
+
+    // padding: 27px $mobile-hpadding 0;    // TODO: Перевести в относительные единицы измерения
+
+    // &::before {
+    //     content: '';
+
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     left: 0;
+    //     z-index: -1;
+
+    //     height: 305px;
+
+    //     background: url(../images/index-background-mobile.jpg) center 0 no-repeat $primary-color-dark;
+    // }
+
+    @media (min-width: $tablet-min-width) {
+        &::before {
+            content: none;
+        }
+    }
+}
+
+.page-header__page-title {
+    @media (min-width: $tablet-min-width) {
+        padding: 0 27.1% 0 12.7%;
+    }
+}
+
+.page-header__slogan {
+    margin-top: 23px;    // TODO: Перевести в относительные единицы измерения
+
+    font-family: $secondary-font;
+    color: $on-primary-color;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-min-width) {
+        padding: 0 27.1% 0 12.7%;
+        margin-top: 1.95em;
+
+        font-size: 1.25em;
+        color: $on-background-label-color;
+        text-align: left;
+    }
+}
+
+.page-header__product-image {
+    display: block;
+
+    margin: 26px auto 0;    // TODO: Перевести в относительные единицы измерения
+
+    img {
+        display: block;
+    }
+
+    @media (min-width: $tablet-min-width) {
+        margin: 1.06em 0 0;
+    }
+}
+
+.page-header__show-diets-button {
+    margin-top: 3px;    // TODO: Перевести в относительные единицы измерения
+
+    @media (min-width: $tablet-min-width) {
+        position: absolute;
+        bottom: 529px;
+    }
+}
+
+.page-header__show-diets-button-wrapper {
+    @media (min-width: $tablet-min-width) {
+        padding: 0 27.1% 0 12.7%;
+    }
+}

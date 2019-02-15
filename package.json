@@ -1,9 +1,10 @@
 {
   "name": "cat-energy",
-  "version": "0.0.0",
-  "description": "HTMLAcademy Cat Energy template markup.",
+  "version": "0.2.0",
+  "description": "Разметка шаблона «Cat Energy» от HTMLAcademy.",
   "main": "build/index.html",
   "scripts": {
+    "start": "gulp build & gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

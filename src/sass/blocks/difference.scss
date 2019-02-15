@@ -1,5 +1,58 @@
+.difference__images {
+    position: relative;
+
+    height: 631px;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        right: 50%;
+        bottom: 0;
+        left: 0;
+
+        height: 462px;
+
+        background: $secondary-color;
+    }
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        z-index: -1;
+
+        height: 462px;
+
+        background: $secondary-dark-color;
+    }
+}
+
+.difference__before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 370px);
+
+    clip: rect(auto, 370px, auto, 0);
+}
+
+.difference__after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: calc(50% - 259px);
+
+    clip: rect(auto, auto, auto, 259px);
+}
+
 .difference__control {
     display: flex;
+    align-items: center;
     justify-content: center;
 
     margin-top: 28px;
@@ -8,7 +61,13 @@
 .difference__label {
     font-family: $secondary-font;
     font-size: 1.15em;
+    line-height: 1;
+    color: $on-secondary-label-color;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-min-width) {
+        font-size: 1.25em;
+    }
 }
 
 .difference__original-range {
@@ -23,8 +82,8 @@
     height: 12px;
     margin: 0 19px;
 
-    background: #fff;
-    border: 1px solid #cdcdcd;
+    background: $background-color;
+    border: 1px solid $border-color-3;
     border-radius: 7px;
 
     &::before {
@@ -39,7 +98,32 @@
         width: 35px;
         height: 6px;
 
-        background: $first-color;
+        background: $primary-color;
         border-radius: 3px;
+    }
+
+    @media (min-width: $tablet-min-width) {
+        top: 0;
+
+        width: 55.9%;
+        height: 0.375em;
+
+        background: #dcdcdc;
+        border: none;
+
+        &::before {
+            position: absolute;
+
+            width: 2em;
+            height: 2em;
+
+            background: $primary-color;
+            border: 1px solid $border-color-3;
+            border-radius: 50%;
+            box-shadow:
+                0 0.125em 0.31em rgba(0, 0, 0, 0.15),
+                inset 0 0 0 0.75em $background-color;
+            transform: translateY(-50%);
+        }
     }
 }

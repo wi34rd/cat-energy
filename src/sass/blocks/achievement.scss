@@ -1,0 +1,52 @@
+.achievement {
+    position: relative;
+
+    flex-basis: 50%;
+
+    padding: 0.9em 0;
+
+    border: 1px solid $border-color-3;
+    border-radius: 3px;
+
+    & + & {
+        margin-left: 11.5%;
+    }
+}
+
+.achievement__text {
+    display: block;
+
+    font-family: $secondary-font;
+    font-size: 1.7rem;
+    color: $on-background-label-color;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.achievement__legend {
+    position: absolute;
+    top: 3.8em;
+    right: 0;
+    left: 0;
+}
+
+.achievement__legend-text {
+    display: table;
+
+    padding: 0 1.415em; // TODO: заменить на относительную величину
+    margin: 0 auto;
+
+    font-size: .855em;
+    line-height: 1;
+    text-align: center;
+
+    background: $secondary-color;
+
+    @media (min-width: $tablet-min-width) {
+        padding: 0 0.57em;
+
+        font-size: 0.875em;
+
+        background: $background-color;
+    }
+}

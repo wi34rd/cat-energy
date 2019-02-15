@@ -1,6 +1,17 @@
 .page {
+    --hpadding: 20px;
+
+    min-width: $mobile-min-width;
+
     font-family: $primary-font;
     font-size: 87.5%;
     line-height: 1.3;
-    color: #444;
+    color: $on-background-color;
+
+    @media (min-width: $tablet-min-width) {
+        --hpadding: 30px;
+
+        font-size: 100%;
+        line-height: 1.5;
+    }
 }

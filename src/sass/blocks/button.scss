@@ -1,16 +1,21 @@
 .button {
-    @extend %custom-button;
-
     display: block;
 
-    padding: 11px 0;
-    margin-top: 3px;
+    padding: 11px 0;    // TODO: Перевести в относительные единицы измерения
 
     font-family: $secondary-font;
-    color: #fff;
+    color: $on-primary-color;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
-    background: $first-color;
+    background: $primary-color;
+
+    @media (min-width: $tablet-min-width) {
+        display: table;
+
+        padding: 0.6em 1.3em 0.7em;
+
+        font-size: 1.25em;
+    }
 }

@@ -1,19 +1,36 @@
 .explanation {
-    padding: 0 $mobile-hpadding;
+    padding: 1.715em $mobile-hpadding 3em;
+
+    @media (min-width: $tablet-min-width) {
+        padding: 1.875em $tablet-hpadding 0;
+    }
 }
 
 .explanation__list {
     @extend %custom-list;
+
+    margin-top: 2.355em;
+
+    @media (min-width: $tablet-min-width) {
+        display: grid;
+        grid-template-columns: 34.6% 34.6%;
+        grid-column-gap: 15.4%;
+        grid-row-gap: 8.31em;
+
+        margin: 3.56em 0 6.375em;
+
+        counter-reset: adventages;
+    }
 }
 
 .explanation__item {
     position: relative;
 
-    display: flex;
-    align-items: center;
+    display: flex;    // TODO: Определить, нужно оно здесь или нет
 
+    box-sizing: border-box;
     min-height: 60px;
-    padding-left: 81px;
+    padding: 0.215em 0 0 81px;
 
     &::before {
         content: '';
@@ -22,14 +39,43 @@
         top: 0;
         left: 0;
 
+        // Ширина фиксирована, потому что изображения в формате png (не скалируются)
         width: 60px;
         height: 60px;
 
-        background: $icon-bg-color center no-repeat;
+        background: $primary-color center no-repeat;
     }
 
     & + & {
-        margin-top: 20px;
+        margin-top: 1.43em;
+    }
+
+    @media (min-width: $tablet-min-width) {
+        padding: 112px 0 0;
+
+        &::before {
+            width: 80px;
+            height: 80px;
+        }
+
+        &::after {
+            counter-increment: adventages;
+            content: counter(adventages);
+
+            position: absolute;
+            top: -0.145em;
+            left: 48%;
+            z-index: -1;
+
+            font-family: $secondary-font;
+            font-size: 17.56em;
+            line-height: 1;
+            color: $secondary-color;
+        }
+
+        & + & {
+            margin: 0;
+        }
     }
 }
 
