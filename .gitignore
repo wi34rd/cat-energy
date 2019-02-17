@@ -1,4 +1,5 @@
 .*
 !.gitignore
 !.editorconfig
+build
 node_modules

@@ -10,13 +10,13 @@
 
     &__icon {
         rect {
+            transform-origin: 12px 12px;
             transition: 1s;
         }
     }
 
     &[aria-expanded="true"] &__icon {
         rect {
-            transform-origin: 12px 12px;
             y: 11;
         }
 

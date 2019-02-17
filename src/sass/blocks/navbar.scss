@@ -53,7 +53,7 @@
     }
 }
 
-.navbar__logo {
+.navbar__brand-image {
     img {
         width: auto;
         height: 1.9em;
@@ -68,7 +68,7 @@
     }
 }
 
-.navbar__mobile-logo-heading {
+.navbar__brand-heading {
     justify-self: center;
 
     width: auto;
@@ -117,7 +117,7 @@
     }
 }
 
-.navbar__menu--collapsed {
+.navbar__menu[aria-expanded="false"] {
     @media (max-width: 767px) {
         margin-top: -9.9em;
     }
