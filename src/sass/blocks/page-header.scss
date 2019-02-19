@@ -7,7 +7,9 @@
 .page-header__heading {
     padding: 1.93em var(--hpadding) 0;
 
-    background: url(../images/index-background-mobile.jpg) center 0 no-repeat, linear-gradient($primary-dark-color 305px, $primary-background-color 0);
+    background:
+        url(../images/index-background-mobile.jpg) center 0 no-repeat,
+        linear-gradient($primary-dark-color 305px, $primary-background-color 0);
 }
 
 // .page-header__page-title {

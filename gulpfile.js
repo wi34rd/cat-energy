@@ -23,7 +23,11 @@ gulp.task('html', () => {
             JSON.parse(fs.readFileSync(path.join(path.dirname(file.path), path.basename(file.path, '.html') + '.json')))
         )))
         .pipe(gulpNunjucks.compile(undefined, {
-            env: new nunjucks.Environment(new nunjucks.FileSystemLoader(['src/html/base/', 'src/html/blocks/']))
+            env: new nunjucks.Environment(new nunjucks.FileSystemLoader([
+                'src/html/base/',
+                'src/html/blocks/',
+                'src/images/inline/'
+            ]))
         }))
         .pipe(gulp.dest((file) => {
             file.path = path.join(file.base, path.basename(file.path));
@@ -33,7 +37,7 @@ gulp.task('html', () => {
 });
 
 gulp.task('css', () => {
-    return gulp.src('src/sass/styles.sass')
+    return gulp.src('src/sass/styles.scss')
         .pipe(sass())
         .pipe(gulp.dest('build/css/'))
         .pipe(browserSync.stream());

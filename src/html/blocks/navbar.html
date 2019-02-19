@@ -6,15 +6,10 @@
             <img src="images/cat-energy-logo-mobile.svg" alt="Логотип Cat Energy">
         </picture>
 
-        <img src="images/cat-energy-heading.svg" alt="Заголовок логотипа Cat Energy" width="101" height="18" class="navbar__brand-heading">
+        <img src="images/cat-energy-heading.svg" alt="Заголовок логотипа Cat Energy" class="navbar__brand-heading">
 
         <button type="button" class="drawer-button navbar__drawer-button" id="drawer-button">
-            <!-- TODO: Убрать в отдельный файл и импортировать -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" class="drawer-button__icon">
-                <rect x="0" y="11" width="24" height="2" transform="rotate(45 12 12)"/>
-                <rect x="12" y="11" width="0" height="2"/>
-                <rect x="0" y="11" width="24" height="2" transform="rotate(-45 12 12)"/>
-            </svg>
+            {% include "drawer-button.svg" %}
         </button>
     </div>
 
