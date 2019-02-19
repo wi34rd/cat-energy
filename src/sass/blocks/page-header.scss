@@ -1,40 +1,23 @@
 .page-header {
-    > *:not(.navbar) {
-        display: none;
-    }
-    // position: relative;
-
-    // padding: 27px $mobile-hpadding 0;    // TODO: Перевести в относительные единицы измерения
-
-    // &::before {
-    //     content: '';
-
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     left: 0;
-    //     z-index: -1;
-
-    //     height: 305px;
-
-    //     background: url(../images/index-background-mobile.jpg) center 0 no-repeat $primary-color-dark;
-    // }
-
     @media (min-width: $tablet-min-width) {
-        &::before {
-            content: none;
-        }
+        padding: 1.335em var(--hpadding) 0;
     }
 }
 
-.page-header__page-title {
-    @media (min-width: $tablet-min-width) {
-        padding: 0 27.1% 0 12.7%;
-    }
+.page-header__heading {
+    padding: 1.93em var(--hpadding) 0;
+
+    background: url(../images/index-background-mobile.jpg) center 0 no-repeat, linear-gradient($primary-dark-color 305px, $primary-background-color 0);
 }
+
+// .page-header__page-title {
+//     @media (min-width: $tablet-min-width) {
+//         padding: 0 27.1% 0 12.7%;
+//     }
+// }
 
 .page-header__slogan {
-    margin-top: 23px;    // TODO: Перевести в относительные единицы измерения
+    margin-top: 1.715em;
 
     font-family: $secondary-font;
     color: $on-primary-color;
@@ -54,10 +37,12 @@
 .page-header__product-image {
     display: block;
 
-    margin: 26px auto 0;    // TODO: Перевести в относительные единицы измерения
+    margin-top: 1.855em;    // TODO: Перевести в относительные единицы измерения
 
     img {
         display: block;
+
+        margin: 0 auto;
     }
 
     @media (min-width: $tablet-min-width) {
@@ -66,7 +51,7 @@
 }
 
 .page-header__show-diets-button {
-    margin-top: 3px;    // TODO: Перевести в относительные единицы измерения
+    margin-top: 0.285em;
 
     @media (min-width: $tablet-min-width) {
         position: absolute;

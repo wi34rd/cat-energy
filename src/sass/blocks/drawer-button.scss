@@ -7,30 +7,25 @@
     height: 1.2em;
 
     outline: none;
+}
 
-    &__icon {
-        rect {
-            transform-origin: 12px 12px;
-            transition: 1s;
-        }
-    }
+.drawer-button__icon rect {
+    transition: .7s;
 
-    &[aria-expanded="true"] &__icon {
-        rect {
-            y: 11;
-        }
+    .drawer-button[aria-expanded="false"] & {
+        transform: none;
 
-        rect:first-child {
-            transform: rotate(45deg);
+        &:nth-child(1) {
+            y: 3px;
         }
 
-        rect:nth-child(2) {
-            x: 12;
-            width: 0;
+        &:nth-child(2) {
+            x: 0;
+            width: 24px;
         }
 
-        rect:last-child {
-            transform: rotate(-45deg);
+        &:nth-child(3) {
+            y: 19px;
         }
     }
 }

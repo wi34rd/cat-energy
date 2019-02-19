@@ -5,12 +5,9 @@
     color: $menu-font-color;
     text-transform: uppercase;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-min-width) {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-
-        padding: 0 var(--hpadding);
 
         font-weight: 400;
         font-size: 1.125em;
@@ -18,7 +15,7 @@
 }
 
 %mobile-navbar-item {
-    @media (max-width: 767px) {
+    @media (max-width: $tablet-min-width - 1) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -27,7 +24,7 @@
         height: 3.3em;
         padding: 0 var(--hpadding);
 
-        border-bottom: 1px solid $border-color-1;
+        border-bottom: 1px solid $border-1-color;
     }
 }
 
@@ -37,12 +34,12 @@
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
 
-    background: $background-color;
+    // Скрывает меню в свернутом состоянии
+    background: $primary-background-color;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-min-width) {
         display: block;
 
-        height: auto;
         padding: 0;
 
         border: none;
@@ -55,15 +52,12 @@
 
 .navbar__brand-image {
     img {
-        width: auto;
         height: 1.9em;
     }
 
-    @media (min-width: 768px) {
-        width: auto;
-
+    @media (min-width: $tablet-min-width) {
         img {
-            height: 3.625em;
+            height: 3.22em;
         }
     }
 }
@@ -71,26 +65,21 @@
 .navbar__brand-heading {
     justify-self: center;
 
-    width: auto;
     height: 0.9em;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-min-width) {
         display: none;
     }
 }
 
 .navbar__drawer-button {
-    display: none;
     justify-self: end;
 
-    cursor: pointer;    // Мало ли в боковой панели Vivaldi сайт будет запускаться
+    // Мало ли в боковой панели Vivaldi сайт будет запускаться
+    cursor: pointer;
 
-    @media (max-width: 767px) {
+    &[aria-expanded] {
         display: block;
-    }
-
-    .nojs & {
-        display: none;
     }
 }
 
@@ -104,21 +93,17 @@
         @extend %mobile-navbar-item;
     }
 
-    @media (max-width: 767px) {
-        transition: margin-top 1s;
-    }
-
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-min-width) {
         display: flex;
-        justify-content: space-between;
-        flex-grow: 1;
 
-        margin-left: 12.5%;
+        margin: -19px;
+
+        li {
+            margin: 19px;
+        }
     }
 }
 
 .navbar__menu[aria-expanded="false"] {
-    @media (max-width: 767px) {
-        margin-top: -9.9em;
-    }
+    margin-top: -9.9em;
 }

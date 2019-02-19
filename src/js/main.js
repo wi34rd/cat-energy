@@ -1,7 +1,53 @@
-document.body.classList.toggle('nojs');
-document.getElementById('drawer-button').addEventListener('click', function () {
-    const isExpanded = this.getAttribute('aria-expanded') !== 'true' || false;
+const TABLET_MIN_WIDTH = 768;
 
-    this.setAttribute('aria-expanded', isExpanded);
-    document.getElementById('main-menu').setAttribute('aria-expanded', isExpanded);
-});
+function MainMenu() {
+    this.mainMenuElement = document.getElementById('main-menu');
+    this.drawerButtonElement = document.getElementById('drawer-button');
+    this.isExpanded = true;
+    this.isMobile = window.innerWidth < TABLET_MIN_WIDTH;
+
+    if (this.isMobile) {
+        this.toggleExpandation();
+    }
+
+    window.addEventListener('resize', (event) => {
+        if (
+            (this.isMobile && window.innerWidth >= TABLET_MIN_WIDTH) ||
+            (!this.isMobile && window.innerWidth < TABLET_MIN_WIDTH)
+        ) {
+            this.toggleMobile();
+        }
+    });
+
+    this.mainMenuElement.addEventListener('transitionend', () => {
+        this.style.transition = 'none';
+    });
+
+    this.drawerButtonElement.addEventListener('click', () => {
+        this.mainMenuElement.style.transition = '0.7s';
+        this.toggleExpandation();
+    });
+}
+
+MainMenu.prototype.toggleExpandation = function() {
+    this.isExpanded = !this.isExpanded;
+    this.mainMenuElement.setAttribute('aria-expanded', this.isExpanded);
+    this.drawerButtonElement.setAttribute('aria-expanded', this.isExpanded);
+}
+
+MainMenu.prototype.toggleMobile = function () {
+    this.isMobile = !this.isMobile;
+
+    if (this.isMobile) {
+        this.toggleExpandation();
+    } else {
+        this.isExpanded = true;
+        this.mainMenuElement.removeAttribute('aria-expanded');
+        this.drawerButtonElement.removeAttribute('aria-expanded');
+        this.mainMenuElement.style.transition = 'none';
+    }
+}
+
+document.body.classList.toggle('nojs');
+
+const mainMenu = new MainMenu();

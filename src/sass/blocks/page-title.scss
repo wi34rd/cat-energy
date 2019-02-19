@@ -5,12 +5,11 @@
     font-size: 2.57em;
     font-weight: 400;
     line-height: 1;    // т. к. есть заголовки в 2+ строки, по макету
-    color: $on-primary-color;    // TODO: Переделять для недомашних страниц
+    color: $on-background-label-color;
     text-align: center;
 
     @media (min-width: $tablet-min-width) {
         font-size: 3.75em;
-        color: $on-background-label-color;    // TODO: Переделять для недомашних страниц
         text-align: left;
     }
 }

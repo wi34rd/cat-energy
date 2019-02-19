@@ -1,0 +1,38 @@
+// Sizes
+$mobile-min-width: 320px;
+$tablet-min-width: 768px;
+$desktop-min-width: 1300px;
+
+// Colors
+$primary-color: #68b738;
+$primary-dark-color: #65a93c;
+// $secondary-dark-color: #eaeaea;
+$primary-background-color: #fff;
+$secondary-background-color: #f2f2f2;
+$border-1-color: #e6e6e6;
+$border-2-color: #d9d9d9;
+$border-3-color: #cdcdcd;
+$on-primary-color: #fff;
+$on-background-color: #444;
+$on-background-label-color: #000;
+$on-secondary-color: $on-background-color;
+$on-secondary-label-color: $on-background-label-color;
+$map-background-color: #fef7f1;
+$menu-font-color: #111;
+
+// Other
+$primary-font: Arial, sans-serif;
+$secondary-font: Oswald, 'Arial Narrow', sans-serif;
+
+// CSS Custom Properties
+:root {
+    --hpadding: 20px;
+
+    @media (min-width: $tablet-min-width) {
+        --hpadding: 30px;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        --hpadding: 40px;
+    }
+}
