@@ -10,13 +10,17 @@
     background:
         url(../images/index-background-mobile.jpg) center 0 no-repeat,
         linear-gradient($primary-dark-color 305px, $primary-background-color 0);
-}
 
-// .page-header__page-title {
-//     @media (min-width: $tablet-min-width) {
-//         padding: 0 27.1% 0 12.7%;
-//     }
-// }
+    @media (min-width: $tablet-min-width) {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        padding: 3.25em 25vw 0 11.72vw;
+
+        background: none;
+    }
+}
 
 .page-header__slogan {
     margin-top: 1.715em;
@@ -27,8 +31,7 @@
     text-transform: uppercase;
 
     @media (min-width: $tablet-min-width) {
-        padding: 0 27.1% 0 12.7%;
-        margin-top: 1.95em;
+        margin-top: 1.8em;
 
         font-size: 1.25em;
         color: $on-background-label-color;
@@ -48,7 +51,10 @@
     }
 
     @media (min-width: $tablet-min-width) {
-        margin: 1.06em 0 0;
+        z-index: -1;
+        order: 1;
+
+        margin: -5.25em -25vw 0 -11.72vw;
     }
 }
 
@@ -56,13 +62,6 @@
     margin-top: 0.285em;
 
     @media (min-width: $tablet-min-width) {
-        position: absolute;
-        bottom: 529px;
-    }
-}
-
-.page-header__show-diets-button-wrapper {
-    @media (min-width: $tablet-min-width) {
-        padding: 0 27.1% 0 12.7%;
+        margin-top: 2.15em;
     }
 }

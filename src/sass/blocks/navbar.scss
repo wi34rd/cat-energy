@@ -38,14 +38,6 @@
 
     @media (min-width: $tablet-min-width) {
         display: block;
-
-        padding: 0;
-
-        border: none;
-
-        &::after {
-            content: none;
-        }
     }
 }
 
@@ -94,10 +86,11 @@
     @media (min-width: $tablet-min-width) {
         display: flex;
 
-        margin: -19px;    // TODO: ->em
+        margin: -2.35vw;
+        margin-left: auto;
 
         li {
-            margin: 19px;     // TODO: ->em
+            margin: 2.35vw;
         }
     }
 }
