@@ -1,7 +1,5 @@
 .index__page-title {
-    color: $on-primary-color;
-
-    @media (min-width: $tablet-min-width) {
-        color: $on-background-label-color;
+    @media (max-width: $tablet-min-width - 1) {
+        color: $on-background-color;
     }
 }
