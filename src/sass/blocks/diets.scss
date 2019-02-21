@@ -25,12 +25,12 @@
 .diets__item {
     position: relative;
 
-    padding: 2.4em 7.1% 1.4em;
+    padding: 2.4em 20px 1.4em;
 
     background: $secondary-background-color;
 
     @media (min-width: $tablet-min-width) {
-        padding: 4.5em 7.3% 3.69em;
+        padding: 4.25em 52px 3.56em;
     }
 }
 
@@ -121,7 +121,7 @@
     margin: 2.25em 0 0;
 
     @media (min-width: $tablet-min-width) {
-        margin-top: 1.375em;
+        margin-top: 1em;
     }
 }
 
@@ -144,8 +144,8 @@
 
         display: inline-block;
 
-        width: 24px;
-        height: 11px;
+        width: 1.2em;
+        height: 0.55em;
         margin-left: 12px;
 
         vertical-align: 1px;
@@ -154,10 +154,10 @@
     }
 
     @media (min-width: $tablet-min-width) {
-        margin-top: 2.75em;
+        margin-top: 2.55em;
         padding: 0;
 
-        font-size: 1.25em;
+        font-size: 1.2em;
 
         border: none;
 
