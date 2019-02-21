@@ -9,7 +9,20 @@
     text-align: center;
 
     @media (min-width: $tablet-min-width) {
+        width: 426px;
+
         font-size: 3.75em;
         text-align: left;
+    }
+}
+
+.page-title--index {
+    @media (max-width: $tablet-min-width - 1) {
+        color: $on-primary-color;
+    }
+
+    @media (min-width: $tablet-min-width) {
+        width: 426px;
+        margin-left: 90px;
     }
 }

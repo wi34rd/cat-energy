@@ -2,6 +2,18 @@
     @media (min-width: $tablet-min-width) {
         padding: 1.335em var(--hpadding) 0;
     }
+
+    @media (min-width: $desktop-min-width) {
+        padding-top: 3.38em;
+        background:
+            url(../images/index-background-desktop.jpg) 50vw 0 no-repeat,
+            linear-gradient(to right, $primary-dark-color, $primary-dark-color) 50vw 0 / 100% 696px no-repeat;
+
+        .container {
+            width: $desktop-min-width;
+            margin: 0 auto;
+        }
+    }
 }
 
 .page-header__heading {
@@ -12,18 +24,20 @@
         linear-gradient($primary-dark-color 305px, $primary-background-color 0);
 
     @media (min-width: $tablet-min-width) {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
+        display: grid;
 
-        padding: 3.25em 25vw 0 11.72vw;
+        padding: 3.25em 0 0;
 
         background: none;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        padding-top: 6.43em;
     }
 }
 
 .page-header__slogan {
-    margin-top: 1.715em;
+    margin: 1.715em 0 0 90px;
 
     font-family: $secondary-font;
     color: $on-primary-color;
@@ -31,6 +45,7 @@
     text-transform: uppercase;
 
     @media (min-width: $tablet-min-width) {
+        width: 426px;
         margin-top: 1.8em;
 
         font-size: 1.25em;
@@ -40,28 +55,32 @@
 }
 
 .page-header__product-image {
-    display: block;
-
     margin-top: 1.855em;
-
-    img {
-        display: block;
-
-        margin: 0 auto;
-    }
 
     @media (min-width: $tablet-min-width) {
         z-index: -1;
-        order: 1;
 
-        margin: -5.25em -25vw 0 -11.72vw;
+        grid-row: 4 / 5;
+        justify-self: center;
+
+        margin-top: -5em;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        z-index: 0;
     }
 }
 
 .page-header__show-diets-button {
-    margin-top: 0.285em;
+    margin: 0.285em 0 0 90px;
 
     @media (min-width: $tablet-min-width) {
+        justify-self: start;
+
         margin-top: 2.15em;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        margin-top: 2.4em;
     }
 }

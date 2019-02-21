@@ -1,7 +1,10 @@
 // Sizes
 $mobile-min-width: 320px;
+$mobile-hpadding: 20px;
 $tablet-min-width: 768px;
+$tablet-hpadding: 30px;
 $desktop-min-width: 1300px;
+$desktop-hpadding: 40px;
 
 // Colors
 $primary-color: #68b738;
@@ -26,13 +29,13 @@ $secondary-font: Oswald, 'Arial Narrow', sans-serif;
 
 // CSS Custom Properties
 :root {
-    --hpadding: 20px;
+    --hpadding: #{$mobile-hpadding};    // SCSS bug
 
     @media (min-width: $tablet-min-width) {
-        --hpadding: 30px;
+        --hpadding: #{$tablet-hpadding};
     }
 
     @media (min-width: $desktop-min-width) {
-        --hpadding: 40px;
+        --hpadding: #{$desktop-hpadding};
     }
 }

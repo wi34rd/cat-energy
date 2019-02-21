@@ -7,8 +7,6 @@
     color: $on-background-color;
 
     @media (min-width: $tablet-min-width) {
-        --hpadding: 30px;
-
         font-size: 100%;
         line-height: 1.5;
     }

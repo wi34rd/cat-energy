@@ -26,6 +26,11 @@
         font-weight: 400;
         font-size: 1.125em;
     }
+
+    @media (min-width: $desktop-min-width) {
+        font-size: 1.25em;
+        color: $on-primary-color;
+    }
 }
 
 .navbar__brand {
@@ -84,13 +89,15 @@
     }
 
     @media (min-width: $tablet-min-width) {
+        z-index: 0;
+
         display: flex;
 
-        margin: -2.35vw;
+        margin: -18px;
         margin-left: auto;
 
         li {
-            margin: 2.35vw;
+            margin: 18px;
         }
     }
 }
