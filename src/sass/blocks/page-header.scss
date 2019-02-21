@@ -4,19 +4,31 @@
     }
 
     @media (min-width: $desktop-min-width) {
-        padding-top: 3.38em;
-        background:
-            url(../images/index-background-desktop.jpg) 50vw 0 no-repeat,
-            linear-gradient(to right, $primary-dark-color, $primary-dark-color) 50vw 0 / 100% 696px no-repeat;
+        padding: 0;
+
+        &::before {
+            content: url(../images/index-background-desktop.jpg);
+
+            position: absolute;
+            right: 0;
+            left: 50%;
+            z-index: -1;
+
+            background: $primary-dark-color;
+        }
 
         .container {
+            box-sizing: border-box;
             width: $desktop-min-width;
+            padding: 3.38em var(--hpadding) 0;
             margin: 0 auto;
         }
     }
 }
 
 .page-header__heading {
+    display: grid;
+
     padding: 1.93em var(--hpadding) 0;
 
     background:
@@ -24,20 +36,19 @@
         linear-gradient($primary-dark-color 305px, $primary-background-color 0);
 
     @media (min-width: $tablet-min-width) {
-        display: grid;
-
         padding: 3.25em 0 0;
 
         background: none;
     }
 
     @media (min-width: $desktop-min-width) {
-        padding-top: 6.43em;
+        padding-top: 1.37em;
+        grid-template-columns: 450px 1fr;
     }
 }
 
 .page-header__slogan {
-    margin: 1.715em 0 0 90px;
+    margin-top: 1.715em;
 
     font-family: $secondary-font;
     color: $on-primary-color;
@@ -46,41 +57,51 @@
 
     @media (min-width: $tablet-min-width) {
         width: 426px;
-        margin-top: 1.8em;
+        margin: 1.8em 0 0 90px;
 
         font-size: 1.25em;
         color: $on-background-label-color;
         text-align: left;
     }
+
+    @media (min-width: $desktop-min-width) {
+        margin-left: 80px;
+    }
 }
 
 .page-header__product-image {
+    justify-self: center;
+
     margin-top: 1.855em;
 
     @media (min-width: $tablet-min-width) {
         z-index: -1;
 
-        grid-row: 4 / 5;
-        justify-self: center;
+        order: 1;
 
         margin-top: -5em;
     }
 
     @media (min-width: $desktop-min-width) {
         z-index: 0;
+
+        grid-area: 1 / 2 / 5 / 3;
+        justify-self: initial;
+
+        margin: 0;
     }
 }
 
 .page-header__show-diets-button {
-    margin: 0.285em 0 0 90px;
+    margin: 0.285em;
 
     @media (min-width: $tablet-min-width) {
         justify-self: start;
 
-        margin-top: 2.15em;
+        margin: 2.15em 0 0 90px;
     }
 
     @media (min-width: $desktop-min-width) {
-        margin-top: 2.4em;
+        margin: 2.4em 0 0 80px;
     }
 }

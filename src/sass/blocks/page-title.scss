@@ -25,4 +25,8 @@
         width: 426px;
         margin-left: 90px;
     }
+
+    @media (min-width: $desktop-min-width) {
+        margin: 1.35em 0 0 80px;
+    }
 }

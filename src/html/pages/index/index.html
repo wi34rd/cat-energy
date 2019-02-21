@@ -2,19 +2,21 @@
 
 {% block header %}
 <header class="page-header">
-    {% include "navbar.html" %}
+    <div class="container">
+        {% include "navbar.html" %}
 
-    <div class="page-header__heading">
-        <h1 class="page-title page-title--index">Функциональное питание для котов</h1>
-        <div class="page-header__slogan">Занялся собой? Займись котом!</div>
+        <div class="page-header__heading">
+            <h1 class="page-title page-title--index">Функциональное питание для котов</h1>
+            <div class="page-header__slogan">Занялся собой? Займись котом!</div>
 
-        <picture class="page-header__product-image">
-            <source media="(min-width: 1300px)" srcset="images/products/cat-energy-pro-chicken-0p-500g-desktop.png">
-            <source media="(min-width: 768px)" srcset="images/products/cat-energy-pro-chicken-0p-500g-tablet.jpg">
-            <img src="images/products/cat-energy-pro-chicken-0p-500g-mobile.png" alt="Cat Energy Pro Курица 0% Natural 500 г">
-        </picture>
+            <picture class="page-header__product-image">
+                <source media="(min-width: 1300px)" srcset="images/products/cat-energy-pro-chicken-0p-500g-desktop.png">
+                <source media="(min-width: 768px)" srcset="images/products/cat-energy-pro-chicken-0p-500g-tablet.jpg">
+                <img src="images/products/cat-energy-pro-chicken-0p-500g-mobile.png" alt="Cat Energy Pro Курица 0% Natural 500 г">
+            </picture>
 
-        <a href="diet-form.html" class="button page-header__show-diets-button">Подобрать программу</a>
+            <a href="diet-form.html" class="button page-header__show-diets-button">Подобрать программу</a>
+        </div>
     </div>
 </header>
 {% endblock %}
