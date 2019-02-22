@@ -1,24 +1,36 @@
 .diets {
-    padding: 0 $mobile-hpadding;
+    padding: 0 var(--hpadding);
     margin-top: 1.6em;
 
     @media (min-width: $tablet-min-width) {
-        padding: 0 $tablet-hpadding;
         margin: 0;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        max-width: 1300px;
+        margin: 80px auto 0;
     }
 }
 
 .diets__list {
     @extend %custom-list;
 
-    li + li {
-        margin-top: 1.4em;
+    --margin: 10px;
+
+    margin: calc(-1 * var(--margin));
+
+    li {
+        margin: var(--margin);
     }
 
     @media (min-width: $tablet-min-width) {
-        li + li {
-            margin-top: 1.875em;
-        }
+        --margin:15px
+    }
+
+    @media (min-width: $desktop-min-width) {
+        --margin: 40px;
+
+        display: flex;
     }
 }
 
@@ -30,6 +42,10 @@
     background: $secondary-background-color;
 
     @media (min-width: $tablet-min-width) {
+        padding: 4.25em 52px 3.56em;
+    }
+
+    @media (min-width: $desktop-min-width) {
         padding: 4.25em 52px 3.56em;
     }
 }
@@ -50,6 +66,10 @@
     @media (min-width: $tablet-min-width) {
         padding-right: 285px;
     }
+
+    @media (min-width: $desktop-min-width) {
+        padding-right: 52px;
+    }
 }
 
 .diets__item--pro {
@@ -67,6 +87,10 @@
 
     @media (min-width: $tablet-min-width) {
         padding-right: 316px;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        padding-right: 52px;
     }
 }
 
@@ -98,6 +122,15 @@
         width: 200px;
         height: 200px;
     }
+
+    @media (min-width: $desktop-min-width) {
+        top: 47px;
+        right: auto;
+        left: 52px;
+
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .diets__title {
@@ -115,6 +148,10 @@
 
         font-size: 2.25em;
     }
+
+    @media (min-width: $desktop-min-width) {
+        padding-left: 162px;
+    }
 }
 
 .diets__description {
@@ -122,6 +159,10 @@
 
     @media (min-width: $tablet-min-width) {
         margin-top: 1em;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        margin-top: 4.06em;
     }
 }
 
@@ -157,7 +198,7 @@
         margin-top: 2.55em;
         padding: 0;
 
-        font-size: 1.2em;
+        font-size: 1.25em;
 
         border: none;
 
@@ -166,5 +207,9 @@
 
             vertical-align: 0.15em;
         }
+    }
+
+    @media (min-width: $desktop-min-width) {
+        margin-top: 1.3em;
     }
 }

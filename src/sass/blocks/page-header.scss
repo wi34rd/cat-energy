@@ -4,6 +4,7 @@
     }
 
     @media (min-width: $desktop-min-width) {
+        min-height: 696px;
         padding: 0;
 
         &::before {
@@ -12,7 +13,8 @@
             position: absolute;
             right: 0;
             left: 50%;
-            z-index: -1;
+
+            line-height: 0;    // убирает отступ снизу
 
             background: $primary-dark-color;
         }
