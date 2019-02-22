@@ -1,5 +1,8 @@
 .explanation {
+    box-sizing: border-box;
+    max-width: $desktop-min-width;
     padding: 1.715em var(--hpadding) 3em;
+    margin: 0 auto;
 
     @media (min-width: $tablet-min-width) {
         padding-top: 1.875em;
@@ -16,20 +19,24 @@
     margin-top: 2.36em;
 
     @media (min-width: $tablet-min-width) {
-        grid-auto-rows: 287px;
-        grid-template-columns: 50% 1fr;
-        grid-gap: 30px;
+        grid-auto-rows: 257px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 60px;
 
         margin-top: 3.56em;
 
         counter-reset: adventages;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 80px;
     }
 }
 
 .explanation__item {
     position: relative;
 
-    width: 236px;
     padding: 0.215em 0 0 81px;
 
     &::before {
@@ -39,7 +46,6 @@
         top: 0;
         left: 0;
 
-        // Ширина фиксирована, потому что изображения в формате png (не скалируются)
         width: 60px;
         height: 60px;
 
@@ -47,6 +53,7 @@
     }
 
     @media (min-width: $tablet-min-width) {
+        width: 245px;
         padding: 112px 0 0;
 
         &::before {

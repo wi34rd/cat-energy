@@ -1,14 +1,15 @@
 .diets {
-    padding: 0 var(--hpadding);
-    margin-top: 1.57em;
+    box-sizing: border-box;
+    max-width: 1300px;
+    padding: 22px var(--hpadding);
+    margin: 0 auto;
 
     @media (min-width: $tablet-min-width) {
-        margin: 0;
+        padding-top: 0;
     }
 
     @media (min-width: $desktop-min-width) {
-        max-width: 1300px;
-        margin: 80px auto 0;
+        padding-top: 80px;
     }
 }
 
