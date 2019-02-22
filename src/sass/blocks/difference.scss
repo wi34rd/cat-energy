@@ -1,72 +1,42 @@
 .difference__images {
     position: relative;
 
-    height: 631px;
+    height: 240px;
 
-    &::before {
-        content: '';
+    line-height: 0;
+}
 
-        position: absolute;
-        right: 50%;
-        bottom: 0;
-        left: 0;
+.difference__before,
+.difference__after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
 
-        height: 462px;
-
-        background: $secondary-color;
-    }
-
-    &::after {
-        content: '';
-
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 50%;
-        z-index: -1;
-
-        height: 462px;
-
-        background: $secondary-dark-color;
-    }
+    transform: translateX(-50%);
 }
 
 .difference__before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(50% - 370px);
-
-    clip: rect(auto, 370px, auto, 0);
+    clip: rect(auto, 160px, auto, 0);
 }
 
 .difference__after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: calc(50% - 259px);
-
-    clip: rect(auto, auto, auto, 259px);
+    clip: rect(auto, auto, auto, 160px);
 }
 
 .difference__control {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: center;
 
-    margin-top: 28px;
-}
+    margin-top: 2em;
 
-.difference__label {
     font-family: $secondary-font;
     font-size: 1.15em;
-    line-height: 1;
     color: $on-secondary-label-color;
     text-transform: uppercase;
 
-    @media (min-width: $tablet-min-width) {
-        font-size: 1.25em;
+    label:first-child {
+        justify-self: end;
     }
 }
 
@@ -75,28 +45,23 @@
 }
 
 .difference__custom-range {
-    position: relative;
-    top: 3px;
-
-    width: 84px;
-    height: 12px;
+    // justify-self: center;
+    width: 72px;
+    height: 0.38em;
+    padding: 0.19em 0.31em;
     margin: 0 19px;
 
-    background: $background-color;
-    border: 1px solid $border-color-3;
-    border-radius: 7px;
+    background: $primary-background-color;
+    border: 1px solid $border-3-color;
+    border-radius: 6px;
 
     &::before {
         content: '';
 
-        position: relative;
-        top: 3px;
-        left: 5px;
-
         display: block;
 
-        width: 35px;
-        height: 6px;
+        width: 50%;
+        height: 100%;
 
         background: $primary-color;
         border-radius: 3px;
@@ -118,11 +83,11 @@
             height: 2em;
 
             background: $primary-color;
-            border: 1px solid $border-color-3;
+            border: 1px solid $border-3-color;
             border-radius: 50%;
             box-shadow:
                 0 0.125em 0.31em rgba(0, 0, 0, 0.15),
-                inset 0 0 0 0.75em $background-color;
+                inset 0 0 0 0.75em $primary-background-color;
             transform: translateY(-50%);
         }
     }

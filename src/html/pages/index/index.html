@@ -84,9 +84,9 @@
         </p>
 
         <div class="example__div">
-            <ul class="example__achievements">
+            <ul class="example__achievement-list">
                 <li class="achievement">
-                    <span class="achievement__text">5 кг</span>
+                    <div class="achievement__text">5 кг</div>
 
                     <div class="achievement__legend">
                         <span class="achievement__legend-text">снижение веса</span>
@@ -94,7 +94,7 @@
                 </li>
 
                 <li class="achievement">
-                    <span class="achievement__text">60 дней</span>
+                    <div class="achievement__text">60 дней</div>
 
                     <div class="achievement__legend">
                         <span class="achievement__legend-text">затрачено времени</span>
@@ -122,10 +122,10 @@
             </div>
 
             <div class="difference__control">
-                <label class="difference__label">Было</label>
-                <input type="range" class="difference__original-range">
+                <label for="difference-range">Было</label>
+                <input type="range" class="difference__original-range" id="difference-range">
                 <div class="difference__custom-range"></div>
-                <label class="difference__label">Стало</label>
+                <label for="difference-range">Стало</label>
             </div>
         </div>
     </section>
