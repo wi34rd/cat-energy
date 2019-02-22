@@ -76,6 +76,8 @@
 
     margin-top: 1.855em;
 
+    line-height: 0;
+
     @media (min-width: $tablet-min-width) {
         z-index: -1;
 
@@ -95,8 +97,8 @@
 }
 
 .page-header__show-diets-button {
-    margin: 0.285em;
-
+    margin-top: 0.21em;
+    
     @media (min-width: $tablet-min-width) {
         justify-self: start;
 

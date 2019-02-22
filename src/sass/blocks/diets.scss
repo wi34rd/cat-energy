@@ -1,6 +1,6 @@
 .diets {
     padding: 0 var(--hpadding);
-    margin-top: 1.6em;
+    margin-top: 1.57em;
 
     @media (min-width: $tablet-min-width) {
         margin: 0;
@@ -15,22 +15,16 @@
 .diets__list {
     @extend %custom-list;
 
-    --margin: 10px;
-
-    margin: calc(-1 * var(--margin));
-
-    li {
-        margin: var(--margin);
-    }
+    display: grid;
+    grid-gap: 20px;
 
     @media (min-width: $tablet-min-width) {
-        --margin:15px
+        grid-gap: 30px;
     }
 
     @media (min-width: $desktop-min-width) {
-        --margin: 40px;
-
-        display: flex;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 80px;
     }
 }
 
