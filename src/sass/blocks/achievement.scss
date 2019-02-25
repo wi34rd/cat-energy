@@ -1,10 +1,14 @@
 .achievement {
     position: relative;
 
-    padding: 0.71em 0 0.9em;
+    padding: 0.7em 0 0.9em;
 
     border: 1px solid $border-3-color;
     border-radius: 3px;
+
+    @media (min-width: $tablet-min-width) {
+        padding: 0.81em 0 1em;
+    }
 }
 
 .achievement__text {
@@ -17,14 +21,19 @@
 
 .achievement__legend {
     position: absolute;
-    top: 3.92em;    // не bottom, чтобы текст переносился вниз
-    left: 50%;
-
-    width: 0;
+    top: 3.92em;
+    right: 0;
+    left: 0;
 
     font-size: .855em;
     line-height: 1;
     text-align: center;
+
+    @media (min-width: $tablet-min-width) {
+        top: 4.4em;
+
+        font-size: 0.88em;
+    }
 }
 
 .achievement__legend-text {
@@ -33,12 +42,15 @@
     padding: 0 17px;
 
     background: $secondary-background-color;
-    transform: translateX(-50%);
+
+    @media (min-width: 400px) {
+        br {
+            display: none;
+        }
+    }
 
     @media (min-width: $tablet-min-width) {
-        padding: 0 0.57em;
-
-        font-size: 0.875em;
+        padding: 0 9px;
 
         background: $primary-background-color;
     }
