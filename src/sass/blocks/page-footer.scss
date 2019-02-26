@@ -1,9 +1,9 @@
 .page-footer {
-    padding: 0 $mobile-hpadding;
+    padding: 0 var(--hpadding);
 
-    background: $secondary-color;
+    background: $secondary-background-color;
 }
 
 .page-footer > * + * {
-    border-top: 1px solid $border-color-2;
+    border-top: 1px solid $border-2-color;
 }
