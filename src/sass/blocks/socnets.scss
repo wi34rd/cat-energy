@@ -7,6 +7,12 @@
     justify-content: center;
 
     padding: 1.43em 0;
+
+    @media (min-width: $tablet-min-width) {
+        padding: 0;
+
+        grid-gap: 25px;
+    }
 }
 
 .socnets__link {
@@ -14,16 +20,29 @@
 
     width: 1.57em;
     height: 1.57em;
+
+    @media (min-width: $tablet-min-width) {
+        width: 1.88em;
+        height: 1.88em;
+    }
 }
 
 .socnets__link--vkontakte {
-    background: url(../images/icons/socnets/vkontakte.svg) center/1.57em 0.86em no-repeat;
+    background: url(../images/icons/socnets/vkontakte.svg) center no-repeat;
 }
 
 .socnets__link--instagram {
-    background: url(../images/icons/socnets/instagram.svg) center/1.14em 1.14em no-repeat;
+    background: url(../images/icons/socnets/instagram.svg) center / 1.14em no-repeat;
+
+    @media (min-width: $tablet-min-width) {
+        background-size: 1.44em;
+    }
 }
 
 .socnets__link--facebook {
-    background: url(../images/icons/socnets/facebook.svg) center/0.71em 1.36em no-repeat;
+    background: url(../images/icons/socnets/facebook.svg) center / 0.71em no-repeat;
+
+    @media (min-width: $tablet-min-width) {
+        background-size: 0.88em;
+    }
 }

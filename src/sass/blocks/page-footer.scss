@@ -2,8 +2,20 @@
     padding: 0 var(--hpadding);
 
     background: $secondary-background-color;
+
+    @media (min-width: $tablet-min-width) {
+        display: grid;
+        grid-template-columns: 162px auto 162px;
+        align-items: center;
+
+        padding: 3.69em var(--hpadding) 3.56em;
+    }
 }
 
 .page-footer > * + * {
     border-top: 1px solid $border-2-color;
+
+    @media (min-width: $tablet-min-width) {
+        border: none;
+    }
 }

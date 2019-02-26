@@ -3,4 +3,10 @@
 
     line-height: 0;
     text-align: center;
+
+    @media (min-width: $tablet-min-width) {
+        justify-self: start;
+
+        padding: 0;
+    }
 }

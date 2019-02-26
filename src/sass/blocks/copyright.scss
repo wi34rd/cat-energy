@@ -4,8 +4,16 @@
     justify-content: space-between;
 
     padding: 1.57em 0;
+
+    @media (min-width: $tablet-min-width) {
+        padding: 0;
+    }
 }
 
 .copyright__owner {
     font-size: 1.15em;
+
+    @media (min-width: $tablet-min-width) {
+        font-size: 1em;
+    }
 }
