@@ -1,4 +1,6 @@
 .example {
+    position: relative;
+
     padding: 1.71em var(--hpadding) 2.57em;
 
     background: $secondary-background-color;
@@ -9,9 +11,62 @@
         background: none;
         border-top: 1px solid $border-1-color;
 
+        &::before,
+        &::after {
+            content: '';
+
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            height: 462px;
+        }
+
+        &::before {
+            left: 0;
+            z-index: -2;
+
+            background: $secondary-background-color;
+        }
+
+        &::after {
+            left: 50%;
+            z-index: -1;
+
+            background: $secondary-background-dark-color;
+        }
+
         > *:not(.example__difference) {
             padding: 0 var(--hpadding);
         }
+    }
+
+    @media (min-width: $desktop-min-width) {
+        padding: 0;
+        margin: 0;
+
+        border: none;
+
+        &::after {
+            left: calc(50% + 305px);
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: 16.31em 10.25em 14.19em;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+
+            box-sizing: border-box;
+            max-width: $desktop-min-width;
+            margin: auto;
+        }
+    }
+}
+
+.example__section-title {
+    @media (min-width: $desktop-min-width) {
+        padding-top: 40px;
     }
 }
 
@@ -21,6 +76,11 @@
     @media (min-width: $tablet-min-width) {
         margin-top: 3.06em;
     }
+
+    @media (min-width: $desktop-min-width) {
+        width: 432px;
+        margin: 0;
+    }
 }
 
 .example__div {
@@ -29,6 +89,14 @@
         align-items: center;
 
         margin-top: 3.31em;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        margin: 0;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        display: block;
     }
 }
 
@@ -69,6 +137,16 @@
             display: block;
         }
     }
+
+    @media (min-width: $desktop-min-width) {
+        margin-top: 2.75em;
+
+        text-align: left;
+
+        span {
+            display: unset;
+        }
+    }
 }
 
 .example__difference {
@@ -76,5 +154,11 @@
 
     @media (min-width: $tablet-min-width) {
         margin-top: 5.38em;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        margin-top: 0;
+
+        grid-area: 1 / 2 / 4 / 3;
     }
 }

@@ -54,4 +54,8 @@
 
         background: $primary-background-color;
     }
+
+    @media (min-width: $desktop-min-width) {
+        background: $secondary-background-color;
+    }
 }
