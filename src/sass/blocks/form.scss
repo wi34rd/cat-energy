@@ -2,10 +2,34 @@
     padding: 2.71em 0 0;
 }
 
+.form__form {
+    font-family: $secondary-font;
+    color: #222;
+}
+
 .form__description {
     padding: 0 var(--hpadding);
     margin: 0;
 
     font-family: $secondary-font;
     text-transform: uppercase;
+}
+
+.form__section {
+    padding: 0 var(--hpadding);
+
+    border: none;
+}
+
+.form__section--w-legend {
+    border-top: 3px solid $primary-color;
+
+    legend {
+        padding: 0 21px;
+        margin-left: -20px;
+
+        font-size: 1.71em;
+        line-height: 1;
+        color: $on-background-label-color;
+    }
 }

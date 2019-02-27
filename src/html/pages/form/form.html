@@ -5,13 +5,13 @@
     <section class="form">
         <h2 class="section-title visually-hidden">Анкета подбора программы питания</h2>
 
-        <form action="">
+        <form class="form__form" action="">
             <p class="form__description">
                 Заполните анкету и мы подберем<br>
                 программу питания для вашего кота
             </p>
 
-            <fieldset>
+            <fieldset class="form__section">
                 <label>
                     Имя:*
                     <input type="text" placeholder="Барсик" required>
@@ -26,27 +26,27 @@
                     Возраст (лет):
                     <input type="text" placeholder="7">
                 </label>
+
+                <div>
+                    <label>
+                        <input type="radio">
+                        Похудение
+                    </label>
+
+                    <label>
+                        <input type="radio">
+                        Набор массы
+                    </label>
+
+                    <label>
+                        <input type="radio">
+                        Не знаю (нужен ваш совет)
+                    </label>
+                </div>
             </fieldset>
 
-            <fieldset>
-                <label>
-                    <input type="radio">
-                    Похудение
-                </label>
-
-                <label>
-                    <input type="radio">
-                    Набор массы
-                </label>
-
-                <label>
-                    <input type="radio">
-                    Не знаю (нужен ваш совет)
-                </label>
-            </fieldset>
-
-            <fieldset>
-                <legend>Контактные данные (владельца кота)</legend>
+            <fieldset class="form__section form__section--w-legend">
+                <legend>Контактные данные<br>(владельца кота)</legend>
 
                 <label>
                     E-mail:*
@@ -59,13 +59,13 @@
                 </label>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="form__section form__section--w-legend">
                 <legend>Комментарий</legend>
 
                 <textarea name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="form__section form__section--w-legend">
                 <legend>Дополнительно</legend>
 
                 <label>
