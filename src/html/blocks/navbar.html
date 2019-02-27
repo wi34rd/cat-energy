@@ -14,12 +14,12 @@
     </div>
 
     <ul class="navbar__menu" id="main-menu">
-    {% for link in links %}
-    {% if activeLink == loop.index %}
+        {% for link in links %}
+        {% if activeLink == loop.index %}
         <li class="navbar__menu-item--active"><a>{{ link.title }}</a></li>
-    {% else %}
+        {% else %}
         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-    {% endif %}
-    {% endfor %}
+        {% endif %}
+        {% endfor %}
     </ul>
 </nav>
