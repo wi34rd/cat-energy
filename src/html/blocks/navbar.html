@@ -14,8 +14,12 @@
     </div>
 
     <ul class="navbar__menu" id="main-menu">
-        <li class="navbar__menu-item--active">Главная</li>
-        <li>Каталог продукции</li>
-        <li>Подбор программы</li>
+    {% for link in links %}
+    {% if activeLink == loop.index %}
+        <li class="navbar__menu-item--active"><a>{{ link.title }}</a></li>
+    {% else %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+    {% endif %}
+    {% endfor %}
     </ul>
 </nav>

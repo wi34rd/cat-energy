@@ -89,6 +89,10 @@
         @extend %mobile-navbar-item;
     }
 
+    a {
+        @extend %custom-link;
+    }
+
     @media (min-width: $tablet-min-width) {
         justify-self: end;
 
