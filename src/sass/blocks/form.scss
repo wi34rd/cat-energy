@@ -1,0 +1,11 @@
+.form {
+    padding: 2.71em 0 0;
+}
+
+.form__description {
+    padding: 0 var(--hpadding);
+    margin: 0;
+
+    font-family: $secondary-font;
+    text-transform: uppercase;
+}

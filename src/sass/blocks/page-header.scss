@@ -34,7 +34,7 @@
 }
 
 .page-header__heading {
-    padding: 1.93em var(--hpadding);
+    padding: 1.93em var(--hpadding) 0;
 
     @media (min-width: $tablet-min-width) {
         padding: 3.25em 0 0;
