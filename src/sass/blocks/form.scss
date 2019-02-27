@@ -21,7 +21,22 @@
     border: none;
 }
 
+.form__section--full-name {
+    margin-top: 2.79em;
+}
+
+.form__section--diets {
+    padding: 1.86em var(--hpadding);
+    margin-top: 1.64em;
+
+    border-top: 1px solid $border-1-color;
+    border-bottom: 1px solid $border-1-color;
+}
+
 .form__section--w-legend {
+    padding-top: 2.3em;
+    margin-top: 2.07em;
+
     border-top: 3px solid $primary-color;
 
     legend {
@@ -40,6 +55,10 @@
 
     font-size: 1.14em;
     text-transform: uppercase;
+
+    & + & {
+        margin-top: 14px;
+    }
 }
 
 .form__input {
