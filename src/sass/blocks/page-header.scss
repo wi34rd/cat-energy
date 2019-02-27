@@ -4,8 +4,20 @@
     }
 
     @media (min-width: $desktop-min-width) {
-        min-height: 696px;
         padding: 0;
+
+        .container {
+            box-sizing: border-box;
+            max-width: $desktop-min-width;
+            padding: 3.38em var(--hpadding) 0;
+            margin: 0 auto;
+        }
+    }
+}
+
+.index .page-header {
+    @media (min-width: $desktop-min-width) {
+        min-height: 696px;
 
         &::before {
             content: url(../images/index-background-desktop.jpg);
@@ -14,38 +26,40 @@
             right: 0;
             left: 50%;
 
-            line-height: 0;    // убирает отступ снизу
+            line-height: 0;
 
             background: $primary-dark-color;
-        }
-
-        .container {
-            box-sizing: border-box;
-            width: $desktop-min-width;
-            padding: 3.38em var(--hpadding) 0;
-            margin: 0 auto;
         }
     }
 }
 
 .page-header__heading {
-    display: grid;
+    padding: 1.93em var(--hpadding);
 
-    padding: 1.93em var(--hpadding) 0;
+    @media (min-width: $tablet-min-width) {
+        padding: 3.25em 0 0;
+    }
+
+    @media (min-width: $desktop-min-width) {
+        padding-top: 4.31em;
+    }
+}
+
+.index .page-header__heading {
+    display: grid;
 
     background:
         url(../images/index-background-mobile.jpg) center 0 no-repeat,
         linear-gradient($primary-dark-color 305px, $primary-background-color 0);
 
     @media (min-width: $tablet-min-width) {
-        padding: 3.25em 0 0;
-
         background: none;
     }
 
     @media (min-width: $desktop-min-width) {
-        padding-top: 1.37em;
         grid-template-columns: 450px 1fr;
+
+        padding-top: 1.37em;
     }
 }
 
@@ -98,7 +112,7 @@
 
 .page-header__show-diets-button {
     margin-top: 0.21em;
-    
+
     @media (min-width: $tablet-min-width) {
         justify-self: start;
 

@@ -30,6 +30,11 @@
 
     @media (min-width: $desktop-min-width) {
         font-size: 1.25em;
+    }
+}
+
+.index .navbar {
+    @media (min-width: $desktop-min-width) {
         color: $on-primary-color;
     }
 }
@@ -126,7 +131,9 @@
             background: $primary-color;
         }
     }
+}
 
+.index .navbar__menu-item--active {
     @media (min-width: $desktop-min-width) {
         &::after {
             background: #fff;

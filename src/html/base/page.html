@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ pageTitle }} :: {{ siteTitle }}</title>
+    <!-- TODO: Убрать в отдельный файл и заинклудить -->
     <style>
         .navbar__drawer-button {
             display: none;
@@ -13,8 +14,18 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="page nojs">
-    {% block header %}{% include "page-header.html" %}{% endblock %}
+<body class="nojs page {{ pageIdName }}">
+    <header class="page-header">
+        <div class="container">
+            {% include "navbar.html" %}
+
+            {% block heading %}
+            <div class="page-header__heading">
+                <h1 class="page-title">{{ pageTitle }}</h1>
+            </div>
+            {% endblock %}
+        </div>
+    </header>
 
     {% block main %}<main></main>{% endblock %}
 

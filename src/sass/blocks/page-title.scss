@@ -6,22 +6,23 @@
     font-weight: 400;
     line-height: 1;
     color: $on-background-label-color;
-    text-align: center;
 
     @media (min-width: $tablet-min-width) {
         font-size: 3.75em;
-        text-align: left;
     }
 }
 
-.page-title--index {
+.index .page-title {
     @media (max-width: $tablet-min-width - 1) {
         color: $on-primary-color;
+        text-align: center;
     }
 
     @media (min-width: $tablet-min-width) {
         width: 426px;
         margin-left: 90px;
+
+        text-align: unset;
     }
 
     @media (min-width: $desktop-min-width) {
