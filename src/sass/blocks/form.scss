@@ -33,3 +33,10 @@
         color: $on-background-label-color;
     }
 }
+
+.form__label {
+    display: block;
+
+    font-size: 1.14em;
+    text-transform: uppercase;
+}
