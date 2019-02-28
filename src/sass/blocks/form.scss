@@ -4,7 +4,7 @@
 
 .psform__form {
     font-family: $secondary-font;
-    font-size: 1.15em;
+    font-size: 1.14em;
     color: #222;
     text-transform: uppercase;
 }
@@ -45,7 +45,7 @@
         padding: 0 21px;
         margin-left: calc(-1 * var(--hpadding));
 
-        font-size: 1.7em;
+        font-size: 1.5em;
         line-height: 1;
         color: $on-background-label-color;
         text-transform: initial;
@@ -94,6 +94,18 @@
     flex: 1;
 
     margin-left: 16px;
+}
+
+.psform__input--email {
+    padding-right: 46px;
+
+    background: url(../images/email-icon.svg) right 15px center / 17px 13px no-repeat;
+}
+
+.psform__input--phone {
+    padding-right: 46px;
+
+    background: url(../images/phone-icon.svg) right 12px center / 20px 20px no-repeat;
 }
 
 .psform__textarea {
