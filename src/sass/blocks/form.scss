@@ -22,12 +22,12 @@
 }
 
 .form__section--full-name {
-    margin-top: 2.79em;
+    margin-top: 2.8em;
 }
 
 .form__section--diets {
-    padding: 1.86em var(--hpadding);
-    margin-top: 1.64em;
+    padding: 1.85em var(--hpadding);
+    margin-top: 1.65em;
 
     border-top: 1px solid $border-1-color;
     border-bottom: 1px solid $border-1-color;
@@ -35,29 +35,33 @@
 
 .form__section--w-legend {
     padding-top: 2.3em;
-    margin-top: 2.07em;
+    margin-top: 2.1em;
 
     border-top: 3px solid $primary-color;
 
     legend {
         padding: 0 21px;
-        margin-left: -20px;
+        margin-left: calc(-1 * var(--hpadding));
 
-        font-size: 1.71em;
+        font-size: 1.7em;
         line-height: 1;
         color: $on-background-label-color;
     }
+}
+
+.form__section--button {
+    margin-top: 2.85em;
 }
 
 .form__label {
     display: flex;
     align-items: center;
 
-    font-size: 1.14em;
+    font-size: 1.15em;
     text-transform: uppercase;
 
     & + & {
-        margin-top: 14px;
+        margin-top: 1em;
     }
 }
 
