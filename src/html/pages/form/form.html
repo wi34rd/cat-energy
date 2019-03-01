@@ -11,7 +11,7 @@
                 программу питания для вашего кота
             </p>
 
-            <fieldset class="psform__section psform__section--full-name">
+            <div class="psform__full-name">
                 <label class="psform__label">
                     Имя:*
                     <input type="text" placeholder="Барсик" class="psform__input" required>
@@ -26,9 +26,9 @@
                     Возраст (лет):
                     <input type="text" placeholder="7" class="psform__input">
                 </label>
-            </fieldset>
+            </div>
 
-            <fieldset class="psform__section psform__section--diets">
+            <div class="psform__diets">
                 <label class="psform__label">
                     <input type="radio" name="diet" class="psform__radio" checked>
                     Похудение
@@ -43,74 +43,77 @@
                     <input type="radio" name="diet" class="psform__radio">
                     Не знаю (нужен ваш совет)
                 </label>
+            </div>
+
+            <fieldset class="psform__contacts">
+                <legend>Контактные данные<br> (владельца кота)</legend>
+
+                <div class="container">
+                    <label class="psform__label">
+                        E-mail:*
+                        <input
+                            type="email"
+                            placeholder="kuklachev@gmail.com"
+                            class="psform__input psform__input--email"
+                            required
+                        >
+                    </label>
+
+                    <label class="psform__label">
+                        Телефон:*
+                        <input
+                            type="tel"
+                            placeholder="8 (960) 900-60-90"
+                            class="psform__input psform__input--phone"
+                            required
+                        >
+                    </label>
+                </div>
             </fieldset>
 
-            <fieldset class="psform__section psform__section--w-legend">
-                <legend>Контактные данные<br>(владельца кота)</legend>
-
-                <label class="psform__label">
-                    E-mail:*
-                    <input
-                        type="email"
-                        placeholder="kuklachev@gmail.com"
-                        class="psform__input psform__input--email"
-                        required
-                    >
-                </label>
-
-                <label class="psform__label">
-                    Телефон:*
-                    <input
-                        type="tel"
-                        placeholder="8 (960) 900-60-90"
-                        class="psform__input psform__input--phone"
-                        required
-                    >
-                </label>
-            </fieldset>
-
-            <fieldset class="psform__section psform__section--w-legend">
+            <fieldset class="psform__comment">
                 <legend>Комментарий</legend>
 
-                <textarea
-                    name="comment"
-                    placeholder="Расскажите обо всех повадках кота"
-                    class="psform__textarea"
-                ></textarea>
+                <div class="container">
+                    <textarea
+                        name="comment"
+                        placeholder="Расскажите обо всех повадках кота"
+                        class="psform__textarea"
+                    ></textarea>
+                </div>
             </fieldset>
 
-            <fieldset class="psform__section psform__section--w-legend">
+            <fieldset class="psform__extra">
                 <legend>Дополнительно</legend>
 
-                <label class="psform__label">
-                    <input type="checkbox" class="psform__checkbox" checked>
-                    Сахорозаменитель
-                </label>
+                <div class="container">
+                    <label class="psform__label">
+                        <input type="checkbox" class="psform__checkbox" checked>
+                        Сахорозаменитель
+                    </label>
 
-                <label class="psform__label">
-                    <input type="checkbox" class="psform__checkbox">
-                    Питьевая вода
-                </label>
+                    <label class="psform__label">
+                        <input type="checkbox" class="psform__checkbox">
+                        Питьевая вода
+                    </label>
 
-                <label class="psform__label">
-                    <input type="checkbox" class="psform__checkbox">
-                    Молоко
-                </label>
+                    <label class="psform__label">
+                        <input type="checkbox" class="psform__checkbox">
+                        Молоко
+                    </label>
 
-                <label class="psform__label">
-                    <input type="checkbox" class="psform__checkbox">
-                    Витамины
-                </label>
+                    <label class="psform__label">
+                        <input type="checkbox" class="psform__checkbox">
+                        Витамины
+                    </label>
+                </div>
             </fieldset>
 
-            <fieldset class="psform__section psform__section--button">
+            <div class="psform__submit">
                 <button type="submit" class="button">Отправить заявку</button>
-            </fieldset>
+                <small class="psform__legend">* — Обязательные поля</small>
+            </div>
         </form>
-
-        <div class="psform__legend">
-            <small>* — Обязательные поля</small>
-        </div>
     </section>
 </main>
 {% endblock %}
