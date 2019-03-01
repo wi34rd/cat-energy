@@ -31,33 +31,67 @@
     }
 }
 
-.psform__section {
+%psform__section {
     padding: 0 var(--hpadding);
+
+    @media (min-width: $tablet-min-width) {
+        padding: 0 calc(var(--hpadding) + 40px);
+    }
+}
+
+%psform__section--w-legend {
+    @extend %psform__section;
+
     margin: 0;
 
     border: none;
+    border-top: 3px solid $primary-color;
+
+    legend {
+        position: relative;
+
+        padding: 0 20px;
+        margin-left: calc(-1 * var(--hpadding));
+
+        font-size: 1.5em;
+        line-height: 1;
+        color: $on-background-label-color;
+        text-transform: initial;
+    }
 
     @media (min-width: $tablet-min-width) {
         padding: 0 calc(var(--hpadding) + 30px);
 
-        > * {
-            margin: 0 10px;
+        legend {
+            top: -5px;
+
+            padding: 0 40px;
+
+            font-size: 1.8em;
+        }
+
+        .container {
+            padding: 0 10px;
         }
     }
 }
 
 .psform__full-name {
-    margin-top: 2.8em;
+    @extend %psform__section;
+
+    margin-top: 2.5em;
 
     @media (min-width: $tablet-min-width) {
-        padding: 0 calc(var(--hpadding) + 40px);
         margin-top: 3.3em;
     }
 }
 
 .psform__diets {
-    padding: 1.85em var(--hpadding);
-    margin-top: 1.65em;
+    @extend %psform__section;
+
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    margin-top: 1.5em;
 
     border-top: 1px solid $border-1-color;
     border-bottom: 1px solid $border-1-color;
@@ -75,20 +109,13 @@
 }
 
 .psform__contacts {
-    padding: 2.3em var(--hpadding) 0;
-    margin: 2.1em 0 0;
+    @extend %psform__section--w-legend;
 
-    border: none;
-    border-top: 3px solid $primary-color;
+    padding-top: 2.7em;
+    margin-top: 1.2em;
 
     legend {
-        padding: 0 20px;
-        margin-left: calc(-1 * var(--hpadding));
-
-        font-size: 1.5em;
-        line-height: 1;
-        color: $on-background-label-color;
-        text-transform: initial;
+        top: 9px;
     }
 
     @media (min-width: $tablet-min-width) {
@@ -96,96 +123,49 @@
         margin-top: 4em;
 
         legend {
-            position: relative;
             top: -5px;
-
-            padding: 0 40px;
-
-            font-size: 1.8em;
 
             br {
                 display: none;
             }
         }
-
-        .container {
-            padding: 0 10px;
-        }
     }
 }
 
 .psform__comment {
-    padding: 2.3em var(--hpadding) 0;
-    margin: 2.1em 0 0;
+    @extend %psform__section--w-legend;
 
-    border: none;
-    border-top: 3px solid $primary-color;
+    padding-top: 2.1em;
+    margin-top: 2.1em;
 
     legend {
-        padding: 0 20px;
-        margin-left: calc(-1 * var(--hpadding));
-
-        font-size: 1.5em;
-        line-height: 1;
-        color: $on-background-label-color;
-        text-transform: initial;
+        top: -3px;
     }
 
     @media (min-width: $tablet-min-width) {
-        padding: 3.5em calc(var(--hpadding) + 30px) 0;
+        padding-top: 3.5em;
         margin-top: 3.5em;
-
-        legend {
-            position: relative;
-            top: -5px;
-
-            padding: 0 40px;
-
-            font-size: 1.8em;
-        }
-
-        .container {
-            padding: 0 10px;
-        }
     }
 }
 
 .psform__extra {
-    padding: 2.3em var(--hpadding) 0;
-    margin: 2.1em 0 0;
+    @extend %psform__section--w-legend;
 
-    border: none;
-    border-top: 3px solid $primary-color;
+    padding-top: 1.9em;
+    margin-top: 1.9em;
 
     legend {
-        padding: 0 20px;
-        margin-left: calc(-1 * var(--hpadding));
-
-        font-size: 1.5em;
-        line-height: 1;
-        color: $on-background-label-color;
-        text-transform: initial;
+        top: -3px;
     }
 
     @media (min-width: $tablet-min-width) {
-        padding: 2.6em calc(var(--hpadding) + 30px) 0;
+        padding-top: 2.6em;
         margin-top: 3.2em;
-
-        legend {
-            position: relative;
-            top: -5px;
-
-            padding: 0 40px;
-
-            font-size: 1.8em;
-        }
 
         .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 1.5em 60px;
-
-            padding: 0 10px;
 
             .psform__label {
                 margin-top: 0;
@@ -195,7 +175,9 @@
 }
 
 .psform__submit {
-    margin-top: 2.85em;
+    @extend %psform__section;
+
+    margin-top: 2em;
 
     @media (min-width: $tablet-min-width) {
         display: grid;
@@ -203,7 +185,7 @@
         grid-gap: 60px;
         align-items: center;
 
-        padding: 2.6em calc(var(--hpadding) + 40px);
+        padding-top: 2.6em;
         margin-top: 0.1em;
     }
 }
@@ -232,7 +214,13 @@
     white-space: nowrap;
 
     & + & {
-        margin-top: 1em;
+        margin-top: 0.85em;
+    }
+
+    @media (min-width: $tablet-min-width) {
+        & + & {
+            margin-top: 1em;
+        }
     }
 }
 
@@ -274,7 +262,7 @@
 .psform__textarea {
     box-sizing: border-box;
     width: 100%;
-    height: 9.4em;
+    height: 9.3em;
 
     @media (min-width: $tablet-min-width) {
         height: 8.8em;
