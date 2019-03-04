@@ -1,121 +1,119 @@
 {% extends "page.html" %}
 
 {% block main %}
-<main>
-    <section class="psform">
-        <h2 class="section-title visually-hidden">Анкета подбора программы питания</h2>
+<section class="psform">
+    <h2 class="section-title visually-hidden">Анкета подбора программы питания</h2>
 
-        <form class="psform__form" action="">
-            <p class="psform__description">
-                Заполните анкету и мы подберем<br>
-                программу питания для вашего кота
-            </p>
+    <form class="psform__form" action="">
+        <p class="psform__description">
+            Заполните анкету и мы подберем<br>
+            программу питания для вашего кота
+        </p>
 
-            <div class="psform__div">
-                <div class="psform__full-name">
-                    <label class="psform__label">
-                        Имя:*
-                        <input type="text" placeholder="Барсик" class="psform__input" required>
-                    </label>
+        <div class="psform__div">
+            <div class="psform__full-name">
+                <label class="psform__label">
+                    Имя:*
+                    <input type="text" placeholder="Барсик" class="psform__input" required>
+                </label>
 
-                    <label class="psform__label">
-                        Вес (кг):*
-                        <input type="text" placeholder="7" class="psform__input" required>
-                    </label>
+                <label class="psform__label">
+                    Вес (кг):*
+                    <input type="text" placeholder="7" class="psform__input" required>
+                </label>
 
-                    <label class="psform__label">
-                        Возраст (лет):
-                        <input type="text" placeholder="7" class="psform__input">
-                    </label>
-                </div>
-
-                <div class="psform__diets">
-                    <label class="psform__label">
-                        <input type="radio" name="diet" class="psform__radio" checked>
-                        Похудение
-                    </label>
-
-                    <label class="psform__label">
-                        <input type="radio" name="diet" class="psform__radio">
-                        Набор массы
-                    </label>
-
-                    <label class="psform__label">
-                        <input type="radio" name="diet" class="psform__radio">
-                        Не знаю (нужен ваш совет)
-                    </label>
-                </div>
+                <label class="psform__label">
+                    Возраст (лет):
+                    <input type="text" placeholder="7" class="psform__input">
+                </label>
             </div>
 
-            <fieldset class="psform__contacts">
-                <legend>Контактные данные<br> (владельца кота)</legend>
+            <div class="psform__diets">
+                <label class="psform__label">
+                    <input type="radio" name="diet" class="psform__radio" checked>
+                    Похудение
+                </label>
 
-                <div class="container">
-                    <label class="psform__label">
-                        E-mail:*
-                        <input
-                            type="email"
-                            placeholder="kuklachev@gmail.com"
-                            class="psform__input psform__input--email"
-                            required
-                        >
-                    </label>
+                <label class="psform__label">
+                    <input type="radio" name="diet" class="psform__radio">
+                    Набор массы
+                </label>
 
-                    <label class="psform__label">
-                        Телефон:*
-                        <input
-                            type="tel"
-                            placeholder="8 (960) 900-60-90"
-                            class="psform__input psform__input--phone"
-                            required
-                        >
-                    </label>
-                </div>
-            </fieldset>
-
-            <fieldset class="psform__comment">
-                <legend>Комментарий</legend>
-
-                <div class="container">
-                    <textarea
-                        name="comment"
-                        placeholder="Расскажите обо всех повадках кота"
-                        class="psform__textarea"
-                    ></textarea>
-                </div>
-            </fieldset>
-
-            <fieldset class="psform__extra">
-                <legend>Дополнительно</legend>
-
-                <div class="container">
-                    <label class="psform__label">
-                        <input type="checkbox" class="psform__checkbox" checked>
-                        Сахорозаменитель
-                    </label>
-
-                    <label class="psform__label">
-                        <input type="checkbox" class="psform__checkbox">
-                        Питьевая вода
-                    </label>
-
-                    <label class="psform__label">
-                        <input type="checkbox" class="psform__checkbox">
-                        Молоко
-                    </label>
-
-                    <label class="psform__label">
-                        <input type="checkbox" class="psform__checkbox">
-                        Витамины
-                    </label>
-                </div>
-            </fieldset>
-
-            <div class="psform__submit">
-                <button type="submit" class="button">Отправить заявку</button>
-                <small class="psform__legend">* — Обязательные поля</small>
+                <label class="psform__label">
+                    <input type="radio" name="diet" class="psform__radio">
+                    Не знаю (нужен ваш совет)
+                </label>
             </div>
-        </form>
-    </section>
-</main>
+        </div>
+
+        <fieldset class="psform__contacts">
+            <legend>Контактные данные<br> (владельца кота)</legend>
+
+            <div class="container">
+                <label class="psform__label">
+                    E-mail:*
+                    <input
+                        type="email"
+                        placeholder="kuklachev@gmail.com"
+                        class="psform__input psform__input--email"
+                        required
+                    >
+                </label>
+
+                <label class="psform__label">
+                    Телефон:*
+                    <input
+                        type="tel"
+                        placeholder="8 (960) 900-60-90"
+                        class="psform__input psform__input--phone"
+                        required
+                    >
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="psform__comment">
+            <legend>Комментарий</legend>
+
+            <div class="container">
+                <textarea
+                    name="comment"
+                    placeholder="Расскажите обо всех повадках кота"
+                    class="psform__textarea"
+                ></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset class="psform__extra">
+            <legend>Дополнительно</legend>
+
+            <div class="container">
+                <label class="psform__label">
+                    <input type="checkbox" class="psform__checkbox" checked>
+                    Сахорозаменитель
+                </label>
+
+                <label class="psform__label">
+                    <input type="checkbox" class="psform__checkbox">
+                    Питьевая вода
+                </label>
+
+                <label class="psform__label">
+                    <input type="checkbox" class="psform__checkbox">
+                    Молоко
+                </label>
+
+                <label class="psform__label">
+                    <input type="checkbox" class="psform__checkbox">
+                    Витамины
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="psform__submit">
+            <button type="submit" class="button">Отправить заявку</button>
+            <small class="psform__legend">* — Обязательные поля</small>
+        </div>
+    </form>
+</section>
 {% endblock %}

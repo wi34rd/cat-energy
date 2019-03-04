@@ -27,7 +27,10 @@
         </div>
     </header>
 
-    {% block main %}<main></main>{% endblock %}
+    <main>
+        {% block main %}{% endblock %}
+        {% include "contacts.html" %}
+    </main>
 
     {% block footer %}{% include "page-footer.html" %}{% endblock %}
 
