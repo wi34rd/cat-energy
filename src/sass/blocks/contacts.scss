@@ -3,6 +3,8 @@
 
     padding-top: 2em;
 
+    background: $secondary-background-color;
+
     @media (min-width: $tablet-min-width) {
         padding-top: 3.88em;
     }
@@ -12,8 +14,8 @@
     }
 }
 
-.form .contacts {
-    background: $secondary-background-color;
+.index .contacts {
+    background: none;
 }
 
 .contacts__data {
