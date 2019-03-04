@@ -1,10 +1,10 @@
 .button {
     display: block;
 
-    padding: 0.86em 0;
+    padding: 0.69em 0;
 
     font-family: $secondary-font;
-    font-size: 1rem;
+    font-size: 1.14rem;
     color: $on-primary-color;
     text-align: center;
     text-transform: uppercase;
@@ -34,4 +34,10 @@ button.button {
     color: $on-background-color;
 
     background: $secondary-background-color;
+}
+
+.index .button {
+    padding: 0.86em 0;
+
+    font-size: 1rem;
 }
