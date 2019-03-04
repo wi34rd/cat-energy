@@ -62,6 +62,12 @@
             height: 3.22em;
         }
     }
+
+    @media (min-width: $tablet-min-width) {
+        img {
+            height: 2.95em;
+        }
+    }
 }
 
 .navbar__brand-heading {
