@@ -1,7 +1,7 @@
 .button {
     display: block;
 
-    padding: 0.785em 0;
+    padding: 0.86em 0;
 
     font-family: $secondary-font;
     font-size: 1rem;
@@ -28,4 +28,10 @@ button.button {
     width: 100%;
 
     border: none;
+}
+
+.button--grey {
+    color: $on-background-color;
+
+    background: $secondary-background-color;
 }
