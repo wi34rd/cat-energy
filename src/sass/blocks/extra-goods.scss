@@ -1,0 +1,104 @@
+.extra-goods {
+    padding: 1.79em 0 2.5em;
+}
+
+.extra-goods__heading {
+    position: relative;
+    left: -3px;
+
+    display: inline-block;
+
+    padding: 0 23px;
+    margin: 0;
+
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 1.71em;
+    color: $on-background-label-color;
+
+    background: $primary-background-color;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 17px;
+        z-index: -1;
+
+        width: 100vw;
+        height: 3px;
+
+        background: $primary-color;
+    }
+}
+
+.extra-goods__list {
+    @extend %custom-list;
+
+    padding: 0 var(--hpadding);
+    margin-top: 2.14em;
+}
+
+.extra-goods__item {
+    display: grid;
+    grid-template-rows: 2.07em 2.21em;
+    grid-template-areas:
+        "title title"
+        "size price"
+        "button button";
+
+    padding: 0.79em 0 1.25em;
+
+    border-top: 1px solid $border-3-color;
+
+    &:last-child {
+        border-bottom: 1px solid $border-3-color;
+    }
+}
+
+.extra-goods__title {
+    grid-area: title;
+
+    margin: 0;
+
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 1.14em;
+    color: $on-background-label-color;
+    text-transform: uppercase;
+}
+
+.extra-goods__size {
+    grid-area: size;
+}
+
+.extra-goods__price {
+    grid-area: price;
+}
+
+.extra-goods__button {
+    grid-area: button;
+}
+
+.extra-goods__promotion {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    height: 289px;
+    padding: 0 var(--hpadding);
+    margin-top: 2.44em;
+
+    font-size: 1.14em;
+    color: $on-primary-color;
+    text-align: center;
+
+    background:
+        url(../images/icons/promotion/gift-icon.svg) center 65px no-repeat,
+        url(../images/promotion-background-mobile.jpg) center no-repeat;
+
+    span {
+        width: 170px;
+        margin-bottom: 42px;
+    }
+}
