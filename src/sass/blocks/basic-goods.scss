@@ -5,7 +5,18 @@
 .basic-goods__list {
     @extend %custom-list;
 
-    border-bottom: 1px solid #ededed;
+    display: grid;
+
+    border-bottom: 1px solid $border-1-color;
+
+    @media (min-width: $tablet-min-width) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 140px 60px;
+
+        padding: 0 var(--hpadding);
+
+        border: none;
+    }
 }
 
 .basic-goods__item {
@@ -19,7 +30,25 @@
 
     padding: 0 var(--hpadding) 1.71em;
 
-    border-top: 1px solid #ededed;
+    border-top: 1px solid $border-1-color;
+
+    @media (min-width: $tablet-min-width) {
+        position: relative;
+
+        grid-template-columns: auto;
+        grid-template-rows: 126px 4.81em 7.19em 4.56em;
+        grid-template-areas:
+            "image"
+            "title"
+            "data"
+            "button";
+        align-items: end;
+
+        padding: 0 38px 2.5em;
+
+        background: $secondary-background-color;
+        border: none;
+    }
 }
 
 .basic-goods__title {
@@ -34,6 +63,15 @@
     line-height: 1.25;
     color: $on-background-label-color;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-min-width) {
+        width: auto;
+        margin: 0;
+
+        font-size: 1.25em;
+        line-height: 1;
+        text-align: center;
+    }
 }
 
 .basic-goods__data {
@@ -47,10 +85,23 @@
     td:last-child {
         text-align: right;
     }
+
+    @media (min-width: $tablet-min-width) {
+        font-size: 1em;
+        line-height: 1.85;
+
+        tr {
+            border-bottom: 1px solid $border-3-color;
+        }
+    }
 }
 
 .basic-goods__image {
     grid-area: image;
+
+    @media (min-width: $tablet-min-width) {
+        text-align: center;
+    }
 }
 
 .basic-goods__button {
@@ -58,16 +109,22 @@
 }
 
 .basic-goods__show-more {
+    display: flex;
+    flex-direction: column;
+    
     padding: 1.86em var(--hpadding) 1.71em;
 
     text-align: center;
 
-    border-top: 1px solid #ededed;
-}
+    border-top: 1px solid $border-1-color;
+    background: url(../images/icons/catalog/plus60.svg) no-repeat;
 
-.basic-goods__plus {
-    width: auto;
-    height: 2.14em;
+    @media (min-width: $tablet-min-width) {
+        padding: 3.44em 38px 2.5em;
+
+        background: url(../images/icons/catalog/plus60.svg) center 3.44em / 3.75em no-repeat;
+        border: 1px solid $border-1-color;
+    }
 }
 
 .basic-goods__smtext {
@@ -75,10 +132,20 @@
 
     width: auto;
     margin-top: 1.25em;
+
+    @media (min-width: $tablet-min-width) {
+        margin-top: 5.35em;
+    }
 }
 
 .basic-goods__smdescription {
     margin: 0.75em 0 1.75em;
 
     font-size: 0.86em;
+
+    @media (min-width: $tablet-min-width) {
+        margin: 1.38em 0 auto;
+
+        font-size: 1em;
+    }
 }

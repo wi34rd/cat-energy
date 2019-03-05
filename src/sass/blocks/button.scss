@@ -14,7 +14,7 @@
     @media (min-width: $tablet-min-width) {
         display: table;
 
-        padding: 0.7em 1.4em;
+        padding: 0.69em 1.4em;
 
         font-size: 1.25rem;
     }
@@ -40,4 +40,10 @@ button.button {
     padding: 0.86em 0;
 
     font-size: 1rem;
+}
+
+.catalog .button {
+    @media (min-width: $tablet-min-width) {
+        font-size: 1rem;
+    }
 }
