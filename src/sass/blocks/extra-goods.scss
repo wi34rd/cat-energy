@@ -36,7 +36,7 @@
         content: '';
 
         position: absolute;
-        top: 0;
+        top: 1.75em;
         right: 0;
         left: 0;
         z-index: -1;
@@ -47,7 +47,7 @@
     }
 
     span {
-        padding: 0 23px;
+        padding: 0 var(--hpadding);
 
         background: $primary-background-color;
     }
@@ -56,11 +56,12 @@
         font-size: 2.25em;
 
         &::before {
-            top: 0;
+            top: 2.5em;
         }
 
         span {
             padding: 0 37px;
+            margin-left: var(--hpadding);
         }
     }
 
@@ -72,6 +73,7 @@
 
         span {
             padding: 0 var(--hpadding);
+            margin: 0;
         }
     }
 }
@@ -100,7 +102,7 @@
         "size price"
         "button button";
 
-    padding: 0.79em 0 1.25em;
+    padding: 0.79em 0 1.2em;
 
     border-top: 1px solid $border-3-color;
 
@@ -159,22 +161,29 @@
 
     @media (min-width: $tablet-min-width) {
         justify-self: end;
+
+        margin-top: 0.3em;
     }
 
     @media (min-width: $desktop-min-width) {
         justify-self: start;
+
+        margin-top: 0;
     }
 }
 
 .extra-goods__price {
     grid-area: price;
+    justify-self: end;
 
     @media (min-width: $tablet-min-width) {
-        justify-self: end;
+        margin-top: 0.3em;
     }
 
     @media (min-width: $desktop-min-width) {
         justify-self: start;
+
+        margin-top: 0;
     }
 }
 
@@ -187,9 +196,10 @@
     align-items: flex-end;
     justify-content: center;
 
+    width: 280px;
     height: 289px;
     padding: 0 var(--hpadding);
-    margin-top: 2.44em;
+    margin: 2.44em auto 0;
 
     font-size: 1.14em;
     line-height: 1.25;
@@ -201,13 +211,14 @@
         url(../images/promotion-background-mobile.jpg) center no-repeat;
 
     span {
-        margin-bottom: 42px;
+        margin-bottom: 2.8em;
     }
 
     @media (min-width: $tablet-min-width) {
         align-items: center;
         justify-content: flex-start;
 
+        width: 708px;
         height: 200px;
         margin-top: 4.31em;
 
@@ -215,7 +226,7 @@
         text-align: left;
 
         background:
-            url(../images/icons/promotion/gift-icon.svg) 90px center no-repeat,
+            url(../images/icons/promotion/gift-icon.svg) 120px center no-repeat,
             url(../images/promotion-background-tablet.jpg) center no-repeat;
 
         span {

@@ -26,7 +26,7 @@
 
     @media (min-width: $desktop-min-width) {
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 142px 80px;
+        grid-gap: 143px 80px;
 
         padding: 0;
     }
@@ -37,7 +37,7 @@
 
     display: grid;
     grid-template-columns: 140px auto;
-    grid-template-rows: 5.21em;
+    grid-template-rows: 5.3em 5em;
     grid-template-areas:
         "image title"
         "image data"
@@ -48,7 +48,7 @@
     border-top: 1px solid $border-1-color;
 
     @media (min-width: $tablet-min-width) {
-        grid-template-columns: auto;
+        grid-template-columns: initial;
         grid-template-rows: 126px 4.81em 7.19em 4.56em;
         grid-template-areas:
             "image"
@@ -77,6 +77,10 @@
     color: $on-background-label-color;
     text-transform: uppercase;
 
+    br:nth-child(2) {
+        display: none;
+    }
+
     @media (min-width: $tablet-min-width) {
         width: auto;
         margin: 0;
@@ -84,6 +88,14 @@
         font-size: 1.25em;
         line-height: 1;
         text-align: center;
+
+        br:nth-child(1) {
+            display: none;
+        }
+
+        br:nth-child(2) {
+            display: block;
+        }
     }
 }
 
@@ -117,6 +129,9 @@
         right: 0;
         left: 0;
 
+        margin: 0 -38px;
+
+        line-height: 0;
         text-align: center;
     }
 }
@@ -134,7 +149,7 @@
     text-align: center;
 
     border-top: 1px solid $border-1-color;
-    background: url(../images/icons/catalog/plus60.svg) no-repeat;
+    background: url(../images/icons/catalog/plus30.svg) center 1.85em / 2.14em no-repeat;
 
     @media (min-width: $tablet-min-width) {
         padding: 3.44em 38px 2.5em;
@@ -148,10 +163,18 @@
     @extend .basic-goods__title;
 
     width: auto;
-    margin-top: 1.25em;
+    margin-top: 3.4em;
+
+    br {
+        display: none;
+    }
 
     @media (min-width: $tablet-min-width) {
-        margin-top: 5.35em;
+        margin-top: 5.4em;
+
+        br:nth-child(1) {
+            display: block;
+        }
     }
 }
 
@@ -160,10 +183,18 @@
 
     font-size: 0.86em;
 
+    br {
+        display: none;
+    }
+
     @media (min-width: $tablet-min-width) {
-        margin: 1.38em 0 auto;
+        margin: 1.6em 0 auto;
 
         font-size: 1em;
         line-height: 1.25;
+
+        br {
+            display: block;
+        }
     }
 }
