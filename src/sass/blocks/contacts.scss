@@ -25,13 +25,20 @@
 
     padding: 0 var(--hpadding);
 
+    @media (min-width: $tablet-min-width) {
+        padding: 0 70px;
+    }
+
     @media (min-width: $desktop-min-width) {
         position: absolute;
         top: 50%;
         left: calc((100% - #{$desktop-min-width}) / 2 + var(--hpadding));
 
+        grid-template-columns: auto 168px;
+
+        box-sizing: border-box;
         width: 570px;
-        padding: 4.06em 4.75em 3.81em;
+        padding: 3.8em 76px 3.81em;
 
         background: $primary-background-color;
         transform: translateY(-50%);

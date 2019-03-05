@@ -37,9 +37,15 @@ button.button {
 }
 
 .index .button {
-    padding: 0.86em 0;
+    padding: 0.79em 0;
 
     font-size: 1rem;
+
+    @media (min-width: $tablet-min-width) {
+        padding: 0.55em 26px;
+
+        font-size: 1.25rem;
+    }
 }
 
 .catalog .button {

@@ -1,7 +1,7 @@
 .diets {
     box-sizing: border-box;
     max-width: 1300px;
-    padding: 22px var(--hpadding);
+    padding: 22px var(--hpadding) 0;
     margin: 0 auto;
 
     @media (min-width: $tablet-min-width) {

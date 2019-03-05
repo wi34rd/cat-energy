@@ -73,7 +73,7 @@
 
     @media (min-width: $tablet-min-width) {
         width: 426px;
-        margin: 1.8em 0 0 90px;
+        margin: 1.75em 0 0 90px;
 
         font-size: 1.25em;
         color: $on-background-label-color;
@@ -111,7 +111,7 @@
 }
 
 .page-header__show-diets-button {
-    margin-top: 0.21em;
+    margin-top: 0.29em;
 
     @media (min-width: $tablet-min-width) {
         justify-self: start;

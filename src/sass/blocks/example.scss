@@ -48,13 +48,13 @@
         border: none;
 
         &::after {
-            left: calc(50% + 305px);
+            left: calc(50% + 325px);
         }
 
         .container {
             display: grid;
             grid-template-rows: 16.31em 10.25em 14.19em;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 650px auto;
             align-items: start;
 
             box-sizing: border-box;
@@ -145,6 +145,10 @@
 
         span {
             display: unset;
+        }
+
+        span:nth-child(2) {
+            margin-left: 60px;
         }
     }
 }

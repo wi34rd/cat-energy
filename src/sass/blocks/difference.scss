@@ -3,26 +3,6 @@
         position: relative;
 
         padding-bottom: 4.25em;
-
-        // &::before,
-        // &::after {
-        //     content: '';
-
-        //     position: absolute;
-        //     bottom: 0;
-        //     z-index: -1;
-
-        //     width: 50%;
-        //     height: 462px;
-
-        //     background: $secondary-background-color;
-        // }
-
-        // &::after {
-        //     left: 50%;
-
-        //     background: $secondary-background-dark-color;
-        // }
     }
 
     @media (min-width: $desktop-min-width) {
@@ -55,7 +35,9 @@
     clip: rect(auto, 160px, auto, 0);
 
     @media (min-width: $tablet-min-width) {
-        clip: rect(auto, 338.5px, auto, 0);
+        left: 45%;
+        
+        clip: rect(auto, 366.5px, auto, 0);
     }
 }
 
