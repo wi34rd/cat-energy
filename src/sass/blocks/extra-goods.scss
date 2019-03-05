@@ -1,5 +1,9 @@
 .extra-goods {
     padding: 1.79em 0 2.5em;
+
+    @media (min-width: $tablet-min-width) {
+        padding: 3.63em 0 4.75em;
+    }
 }
 
 .extra-goods__heading {
@@ -30,6 +34,19 @@
 
         background: $primary-color;
     }
+
+    @media (min-width: $tablet-min-width) {
+        left: var(--hpadding);
+
+        padding: 0 37px;
+
+        font-size: 2.25em;
+
+        &::before {
+            top: 0.86em;
+            left: calc(-1 * var(--hpadding));
+        }
+    }
 }
 
 .extra-goods__list {
@@ -37,6 +54,10 @@
 
     padding: 0 var(--hpadding);
     margin-top: 2.14em;
+
+    @media (min-width: $tablet-min-width) {
+        margin-top: 4.44em;
+    }
 }
 
 .extra-goods__item {
@@ -54,6 +75,19 @@
     &:last-child {
         border-bottom: 1px solid $border-3-color;
     }
+
+    @media (min-width: $tablet-min-width) {
+        grid-template-columns: auto auto 95px;
+        grid-template-rows: 49px;
+        grid-template-areas:
+            "title size price"
+            "button button button";
+
+        padding: 1.38em 38px 1.69em;
+
+        border-right: 1px solid $border-3-color;
+        border-left: 1px solid $border-3-color;
+    }
 }
 
 .extra-goods__title {
@@ -70,10 +104,18 @@
 
 .extra-goods__size {
     grid-area: size;
+
+    @media (min-width: $tablet-min-width) {
+        justify-self: end;
+    }
 }
 
 .extra-goods__price {
     grid-area: price;
+
+    @media (min-width: $tablet-min-width) {
+        justify-self: end;
+    }
 }
 
 .extra-goods__button {
@@ -90,6 +132,7 @@
     margin-top: 2.44em;
 
     font-size: 1.14em;
+    line-height: 1.25;
     color: $on-primary-color;
     text-align: center;
 
@@ -98,7 +141,25 @@
         url(../images/promotion-background-mobile.jpg) center no-repeat;
 
     span {
-        width: 170px;
         margin-bottom: 42px;
+    }
+
+    @media (min-width: $tablet-min-width) {
+        align-items: center;
+        justify-content: flex-start;
+
+        height: 200px;
+        margin-top: 4.31em;
+
+        font-size: 1em;
+        text-align: left;
+
+        background:
+            url(../images/icons/promotion/gift-icon.svg) 90px center no-repeat,
+            url(../images/promotion-background-tablet.jpg) center no-repeat;
+
+        span {
+            margin: 0 0 0 423px;
+        }
     }
 }
