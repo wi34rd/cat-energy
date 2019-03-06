@@ -4,6 +4,14 @@
     line-height: 0;
     text-align: center;
 
+    a[href]:hover {
+        opacity: 0.8;
+    }
+
+    a[href]:active {
+        opacity: 0.6;
+    }
+
     @media (min-width: $tablet-min-width) {
         justify-self: start;
 

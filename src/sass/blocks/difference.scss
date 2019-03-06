@@ -35,9 +35,11 @@
     clip: rect(auto, 160px, auto, 0);
 
     @media (min-width: $tablet-min-width) {
-        left: 45%;
-        
-        clip: rect(auto, 366.5px, auto, 0);
+        clip: rect(auto, 366px, auto, 0);
+    }
+
+    @media (min-width: $desktop-min-width) {
+        left: 257px;
     }
 }
 
@@ -45,7 +47,11 @@
     clip: rect(auto, auto, auto, 160px);
 
     @media (min-width: $tablet-min-width) {
-        clip: rect(auto, auto, auto, 272.5px);
+        clip: rect(auto, auto, auto, 272px);
+    }
+
+    @media (min-width: $desktop-min-width) {
+        left: 285px;
     }
 }
 
@@ -77,6 +83,15 @@
 
         label {
             border-bottom: 1px dotted #bebebe;
+            cursor: pointer;
+
+            &:hover {
+                border-bottom: 1px solid #989898;
+            }
+
+            &:active {
+                border: none;
+            }
         }
     }
 
@@ -99,18 +114,6 @@
     border: 1px solid $border-3-color;
     border-radius: 6px; // TODO: сделать 50%
 
-    &::before {
-        content: '';
-
-        display: block;
-
-        width: 50%;
-        height: 100%;
-
-        background: $primary-color;
-        border-radius: 3px;
-    }
-
     @media (min-width: $tablet-min-width) {
         position: relative;
         width: 428px;
@@ -119,27 +122,49 @@
 
         background: #dcdcdc;
         border: none;
-
-        &::before {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-
-            box-sizing: border-box;
-            width: 1.7em;
-            height: 1.7em;
-
-            background: $primary-color;
-            border: 1px solid $border-3-color;
-            border-radius: 50%;
-            box-shadow:
-                0 2px 5px rgba(0, 0, 0, 0.15),
-                inset 0 0 0 0.6em $primary-background-color;
-            transform: translate(-50%, -50%);
-        }
     }
 
     @media (min-width: $desktop-min-width) {
         margin: 0 23.5px;
+    }
+}
+
+.difference__slider {
+    width: 50%;
+    height: 100%;
+
+    background: $primary-color;
+    border-radius: 3px;
+
+    @media (min-width: $tablet-min-width) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        box-sizing: border-box;
+        width: 1.7em;
+        height: 1.7em;
+
+        background: $primary-color;
+        border: 1px solid $border-3-color;
+        border-radius: 50%;
+        box-shadow:
+            0 2px 5px rgba(0, 0, 0, 0.15),
+            inset 0 0 0 0.6em $primary-background-color;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+
+        &:hover {
+            box-shadow:
+                0 3px 5px rgba(0, 0, 0, 0.25),
+                inset 0 0 0 0.6em $primary-background-color;
+        }
+
+        &:active {
+            box-shadow:
+                0 4px 5px rgba(0, 0, 0, 0.3),
+                inset 0 0 0 0.55em $primary-background-color;
+            border: 2px solid #68b738;
+        }
     }
 }

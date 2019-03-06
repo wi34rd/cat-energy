@@ -1,7 +1,7 @@
 <footer class="page-footer">
     <div class="container">
         <section class="brand">
-            <a href="">
+            <a {% if pageIdName != "index" %} href="/" {% endif %}>
                 <img src="images/cat-energy-heading.svg" alt="Cat Energy" width="128" height="24">
             </a>
         </section>
@@ -23,8 +23,10 @@
         </section>
 
         <section class="copyright">
-            <span class="copyright__owner">HTML Academy</span>
-            <img src="images/htmlacademy-logo.svg" alt="Логотип HTML Academy" class="copyright__logo" width="27" height="34">
+            <a href="https://www.htmlacademy.ru/" class="copyright__link">
+                <span class="copyright__owner">HTML Academy</span>
+                {% include "htmlacademy-logo.svg" %}
+            </a>
         </section>
     </div>
 </footer>

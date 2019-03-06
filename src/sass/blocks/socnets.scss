@@ -21,6 +21,10 @@
     width: 1.57em;
     height: 1.57em;
 
+    &:active {
+        opacity: 0.3;
+    }
+
     @media (min-width: $tablet-min-width) {
         width: 1.88em;
         height: 1.88em;
@@ -29,10 +33,18 @@
 
 .socnets__link--vkontakte {
     background: url(../images/icons/socnets/vkontakte.svg) center no-repeat;
+
+    &:hover {
+        background-image: url(../images/icons/socnets/vkontakte-green.svg);
+    }
 }
 
 .socnets__link--instagram {
     background: url(../images/icons/socnets/instagram.svg) center / 1.14em no-repeat;
+
+    &:hover {
+        background-image: url(../images/icons/socnets/instagram-green.svg);
+    }
 
     @media (min-width: $tablet-min-width) {
         background-size: 1.44em;
@@ -41,6 +53,10 @@
 
 .socnets__link--facebook {
     background: url(../images/icons/socnets/facebook.svg) center / 0.71em no-repeat;
+
+    &:hover {
+        background-image: url(../images/icons/socnets/facebook-green.svg);
+    }
 
     @media (min-width: $tablet-min-width) {
         background-size: 0.88em;

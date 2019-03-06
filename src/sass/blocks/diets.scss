@@ -189,6 +189,18 @@
         background: url(../images/characters/arrow-long-right.svg) no-repeat;
     }
 
+    &:hover {
+        &::after {
+            width: 1.65em;
+
+            background-image: url(../images/characters/arrow-very-long-right.svg);
+        }
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+
     @media (min-width: $tablet-min-width) {
         margin-top: 2.55em;
         padding: 0;

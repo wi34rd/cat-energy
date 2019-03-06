@@ -1,9 +1,21 @@
-.copyright {
+.copyright__link {
+    @extend %custom-link;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     padding: 1.57em 0;
+
+    &:hover {
+        svg {
+            fill: #68b738;
+        }
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
 
     @media (min-width: $tablet-min-width) {
         padding: 0;
