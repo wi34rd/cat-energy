@@ -33,6 +33,7 @@
         position: absolute;
         top: 50%;
         left: calc((100% - #{$desktop-min-width}) / 2 + var(--hpadding));
+        z-index: 1;
 
         grid-template-columns: auto 168px;
 
@@ -83,6 +84,7 @@
 .contacts__map {
     display: block;
 
+    height: 362px;
     margin-top: 1.86em;
 
     background: $map-background-color;
@@ -91,10 +93,12 @@
     text-align: center;
 
     @media (min-width: $tablet-min-width) {
+        height: 396px;
         margin-top: 3.44em;
     }
 
     @media (min-width: $desktop-min-width) {
+        height: 400px;
         margin: 0;
     }
 }

@@ -48,6 +48,25 @@ MainMenu.prototype.toggleMobile = function () {
     }
 }
 
+function myMap () {
+    let mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.12),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+
+    let map = new google.maps.Map(document.getElementById("map"), {
+        center: window.innerWidth < 1300 ? { lat: 59.938867, lng: 30.323047 } : { lat: 59.938867, lng: 30.319421},
+        zoom: 17
+    });
+
+    var marker = new google.maps.Marker({
+        position: { lat: 59.938867, lng: 30.323047 },
+        map: map,
+        title: 'Cat Energy'
+    });
+}
+
 document.body.classList.toggle('nojs');
 
 const mainMenu = new MainMenu();
